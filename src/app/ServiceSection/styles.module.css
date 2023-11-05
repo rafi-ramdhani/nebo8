@@ -36,8 +36,232 @@
   text-align: center;
   position: absolute;
   top: -1rem;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards;
 }
 
-.selectedServiceText {
+.serviceTextOneLeft {
+  animation-name: oneLeft;
+}
+.serviceTextTwoLeft {
+  animation-name: twoLeft;
+}
+.serviceTextThreeLeft {
+  animation-name: threeLeft;
+}
+.serviceTextFourLeft {
+  animation-name: fourLeft;
+}
+.serviceTextFiveLeft {
+  animation-name: fiveLeft;
+}
+.serviceTextSixLeft {
+  animation-name: sixLeft;
+}
+.serviceTextSevenLeft {
+  animation-name: sevenLeft;
+}
+
+@keyframes oneLeft {
+  from {
+    top: -20rem;
+    left: -50rem;
+  }
+
+  to {
+    top: -30rem;
+    left: -40rem;
+  }
+}
+@keyframes twoLeft {
+  from {
+    top: -8rem;
+    left: -28rem;
+  }
+
+  to {
+    top: -20rem;
+    left: -50rem;
+  }
+}
+@keyframes threeLeft {
+  from {
+    top: -1rem;
+    left: 0rem;
+    font-size: 2rem;
+  }
+
+  to {
+    top: -8rem;
+    left: -28rem;
+    font-size: 1.5rem;
+  }
+}
+@keyframes fourLeft {
+  from {
+    top: -8rem;
+    left: 28rem;
+  }
+
+  to {
+    top: -1rem;
+    left: 0rem;
+    font-size: 2rem;
+  }
+}
+@keyframes fiveLeft {
+  from {
+    top: -20rem;
+    left: 50rem;
+  }
+
+  to {
+    top: -8rem;
+    left: 28rem;
+  }
+}
+@keyframes sixLeft {
+  from {
+    top: -30rem;
+    left: 40rem;
+  }
+
+  to {
+    top: -20rem;
+    left: 50rem;
+  }
+}
+@keyframes sevenLeft {
+  from {
+    top: -30rem;
+    left: -40rem;
+  }
+
+  to {
+    top: -30rem;
+    left: 40rem;
+  }
+}
+
+.serviceTextOneRight {
+  animation-name: oneRight;
+}
+.serviceTextTwoRight {
+  animation-name: twoRight;
+}
+.serviceTextThreeRight {
+  animation-name: threeRight;
+}
+.serviceTextFourRight {
   font-size: 2rem;
+  animation-name: fourRight;
+}
+.serviceTextFiveRight {
+  animation-name: fiveRight;
+}
+.serviceTextSixRight {
+  animation-name: sixRight;
+}
+.serviceTextSevenRight {
+  animation-name: sevenRight;
+}
+
+/* .serviceTextOneFloat { */
+/*   animation-name: floating; */
+/*   animation-duration: 5s; */
+/*   animation-iteration-count: infinite; */
+/*   animation-fill-mode: backwards; */
+/*   animation-delay: 1s; */
+/* } */
+
+@keyframes floating {
+  0% {
+    translate: -40rem -30.5rem;
+  }
+
+  50% {
+    translate: -40rem -29rem;
+  }
+
+  100% {
+    translate: -40rem -30.5rem;
+  }
+}
+
+@keyframes oneRight {
+  from {
+    top: -30rem;
+    left: 40rem;
+  }
+
+  to {
+    top: -30rem;
+    left: -40rem;
+  }
+}
+@keyframes twoRight {
+  from {
+    top: -30rem;
+    left: -40rem;
+  }
+
+  to {
+    top: -20rem;
+    left: -50rem;
+  }
+}
+@keyframes threeRight {
+  from {
+    top: -20rem;
+    left: -50rem;
+  }
+
+  to {
+    top: -8rem;
+    left: -28rem;
+  }
+}
+@keyframes fourRight {
+  from {
+    top: -8rem;
+    left: -28rem;
+  }
+
+  to {
+    top: -1rem;
+    left: 0rem;
+  }
+}
+@keyframes fiveRight {
+  from {
+    top: -1rem;
+    left: 0rem;
+  }
+
+  to {
+    top: -8rem;
+    left: 28rem;
+  }
+}
+@keyframes sixRight {
+  from {
+    top: -8rem;
+    left: 28rem;
+  }
+
+  to {
+    top: -20rem;
+    left: 50rem;
+  }
+}
+@keyframes sevenRight {
+  from {
+    top: -20rem;
+    left: 50rem;
+  }
+
+  to {
+    top: -30rem;
+    left: 40rem;
+  }
 }
