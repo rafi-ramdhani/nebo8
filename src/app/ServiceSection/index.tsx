@@ -220,6 +220,7 @@ const ServiceSection = () => {
             height={53}
             src="/left-double-arrow.svg"
             alt="Left Arrow Icon"
+            className={styles.selectionArrow}
             onClick={() => handleSelect("left")}
           />
 
@@ -241,6 +242,7 @@ const ServiceSection = () => {
             height={53}
             src="/right-double-arrow.svg"
             alt="Right Arrow Icon"
+            className={styles.selectionArrow}
             onClick={() => handleSelect("right")}
           />
         </div>

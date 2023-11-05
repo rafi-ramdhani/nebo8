@@ -10,6 +10,17 @@
   z-index: 1;
 }
 
+.selectionArrow {
+  cursor: pointer;
+  transition: all 100ms ease-in;
+}
+.selectionArrow:hover {
+  scale: 1.2;
+}
+.selectionArrow:active {
+  scale: 1;
+}
+
 .selection {
   max-height: 53px;
   margin-top: 6rem;
