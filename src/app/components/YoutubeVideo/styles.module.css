@@ -1,0 +1,8 @@
+.youtubeVideo {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+}

@@ -1,0 +1,44 @@
+.homeContent {
+  width: 100%;
+  max-width: 1600px;
+  padding-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.journeyText {
+  max-width: 600px;
+  font-size: 5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  background: linear-gradient(to bottom, #ff7002, #ff0846);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.doubleArrow {
+  margin-top: 5rem;
+  animation-name: upAndDown;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+@keyframes upAndDown {
+  0% {
+    translate: 0rem 0rem;
+  }
+
+  70% {
+    translate: 0rem 2rem;
+  }
+
+  to {
+    translate: 0rem 0rem;
+  }
+}

@@ -1,52 +1,7 @@
-.backgroundImage {
-  object-fit: cover;
-  object-position: center;
-}
-
-.homeBackgroundContainer {
-  width: 100%;
-  height: 1081px;
-  position: relative;
+.navButtonContainer {
+  width: 51px;
+  height: 51px;
   display: flex;
-  justify-content: center;
-}
-
-.serviceBackgroundContainer {
-  width: 100%;
-  height: 1436px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-
-.showreelsBackgroundContainer {
-  width: 100%;
-  height: 1081px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-
-.contactBackgroundContainer {
-  width: 100%;
-  height: 1328px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-
-.clientBackgroundContainer {
-  width: 100%;
-  height: 1097px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-
-.footerBackgroundContainer {
-  width: 100%;
-  height: 1328px;
-  position: relative;
-  display: flex;
+  align-items: center;
   justify-content: center;
 }

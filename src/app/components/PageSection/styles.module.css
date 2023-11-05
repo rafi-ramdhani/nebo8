@@ -1,0 +1,30 @@
+.pageSection {
+  height: fit-content;
+  width: 100%;
+}
+
+.backgroundContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+}
+.home {
+  height: 1081px;
+}
+.service {
+  height: 1436px;
+}
+.showreels {
+  height: 1081px;
+}
+.contact {
+  height: 1328px;
+}
+.client {
+  height: 1097px;
+}
+.footer {
+  height: 1328px;
+}

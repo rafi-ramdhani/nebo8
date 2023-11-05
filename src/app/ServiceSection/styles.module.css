@@ -1,0 +1,29 @@
+.serviceContent {
+  width: 100%;
+  max-width: 1600px;
+  padding-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.selection {
+  max-height: 53px;
+  overflow-y: visible;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.serviceText {
+  min-width: 20rem;
+  max-width: 20rem;
+  font-weight: 600;
+  color: white;
+  font-size: 2rem;
+  text-wrap: wrap;
+  text-align: center;
+}

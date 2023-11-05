@@ -1,0 +1,67 @@
+.headerNavigation {
+  width: 100%;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 100;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 0) 0%
+  );
+}
+
+.headerNavigation > div {
+  width: 100%;
+  height: 100%;
+  max-width: 1600px;
+  padding: 0rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerNavigation nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--nav-bg);
+  border-radius: 1.25rem;
+  padding: 0rem 1rem;
+}
+
+.headerNavigation nav ul {
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.headerNavigation nav ul li {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  list-style: none;
+}
+
+.headerNavigation nav ul li a {
+  list-style: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: white;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+
+.navButtonContainer {
+  width: 51px;
+  height: 51px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
