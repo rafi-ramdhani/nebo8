@@ -1,13 +1,24 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { PageSection, YoutubeVideo } from "../components";
 import NeboLogo from "../components/NeboLogo";
 import styles from "./styles.module.css";
 import Image from "next/image";
 
+type Service =
+  | "6y8d1oUClQE"
+  | "4YneDg6dH4U"
+  | "n62M2pd0-p8"
+  | "UIVhfDWSSKY"
+  | "9vINAPof9Lk"
+  | "U7ajKfnMby0"
+  | "YCMtaTi6kMQ";
+
 const ServiceSection = () => {
-  const [services, setServices] = useState([
+  const [selectedService, setSelectedService] =
+    useState<Service>("UIVhfDWSSKY");
+  const [services, setServices] = useState<Service[]>([
     "6y8d1oUClQE",
     "4YneDg6dH4U",
     "n62M2pd0-p8",
@@ -16,6 +27,14 @@ const ServiceSection = () => {
     "U7ajKfnMby0",
     "YCMtaTi6kMQ",
   ]);
+
+  useEffect(() => {
+    const selectTimeout = setTimeout(() => {
+      setSelectedService(services[3]);
+    }, 500);
+
+    return () => clearTimeout(selectTimeout);
+  }, [services]);
 
   const handleSelect = (direction: "left" | "right") => {
     switch (direction) {
@@ -49,7 +68,7 @@ const ServiceSection = () => {
   return (
     <PageSection section="service">
       <div className={styles.serviceContent}>
-        <YoutubeVideo videoId={services[3]} />
+        <YoutubeVideo videoId={selectedService} />
         <NeboLogo />
         <div className={styles.selection}>
           <Image
@@ -59,7 +78,49 @@ const ServiceSection = () => {
             alt="Left Arrow Icon"
             onClick={() => handleSelect("left")}
           />
-          <h3 className={styles.serviceText}>{services[3]}</h3>
+          <div className={styles.serviceTextContainer}>
+            <h3
+              className={styles.serviceText}
+              style={{ top: "-30rem", left: "-40rem" }}
+            >
+              {services[0]}
+            </h3>
+            <h3
+              className={styles.serviceText}
+              style={{ top: "-20rem", left: "-50rem" }}
+            >
+              {services[1]}
+            </h3>
+            <h3
+              className={styles.serviceText}
+              style={{ top: "-8rem", left: "-28rem" }}
+            >
+              {services[2]}
+            </h3>
+            <h3
+              className={`${styles.serviceText} ${styles.selectedServiceText}`}
+            >
+              {services[3]}
+            </h3>
+            <h3
+              className={styles.serviceText}
+              style={{ top: "-8rem", left: "28rem" }}
+            >
+              {services[4]}
+            </h3>
+            <h3
+              className={styles.serviceText}
+              style={{ top: "-20rem", left: "50rem" }}
+            >
+              {services[5]}
+            </h3>
+            <h3
+              className={styles.serviceText}
+              style={{ top: "-30rem", left: "40rem" }}
+            >
+              {services[6]}
+            </h3>
+          </div>
           <Image
             width={38}
             height={53}
