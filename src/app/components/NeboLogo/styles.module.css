@@ -1,0 +1,5 @@
+.neboLogo {
+  width: calc(1rem * 182 * 0.0625);
+  height: calc(1rem * 67 * 0.0625);
+  position: relative;
+}

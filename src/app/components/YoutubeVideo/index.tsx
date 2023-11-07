@@ -13,32 +13,42 @@ const YoutubeVideo = ({ videoId = "2g811Eo7K8U" }: YoutubeVideoProps) => {
 
   const isDeviceTBD = device === "TBD";
 
-  const widthDecider = () => {
-    switch (device) {
-      case "phone":
-      case "tablet":
-        return "100%";
+  const sizeDecider = () => {
+    let width = 828;
+    let height = 514;
 
+    switch (device) {
+      case "laptop":
+        width = width * 0.75;
+        height = height * 0.75;
+        break;
+      case "tablet":
+        width = width * 0.75 * 0.75;
+        height = height * 0.75 * 0.75;
+        break;
+      case "phone":
+        width = width * 0.75 * 0.75 * 0.75;
+        height = height * 0.75 * 0.75 * 0.75;
+        break;
+      case "desktop":
       default:
-        return "828";
+        break;
     }
+
+    return { width, height };
   };
 
-  const width = widthDecider();
+  const { width, height } = sizeDecider();
 
   const opts: YouTubeProps["opts"] = {
-    height: "514",
+    height,
     width,
   };
 
   if (isDeviceTBD) return null;
 
   return (
-    <YouTube
-      opts={opts}
-      videoId={videoId}
-      className={styles.youtubeVideo}
-    />
+    <YouTube opts={opts} videoId={videoId} className={styles.youtubeVideo} />
   );
 };
 

@@ -11,6 +11,9 @@
 }
 
 .selectionArrow {
+  width: calc(1rem * 38 * 0.0625);
+  height: calc(1rem * 53 * 0.0625);
+  position: relative;
   cursor: pointer;
   transition: all 100ms ease-in;
 }
@@ -22,7 +25,7 @@
 }
 
 .selection {
-  max-height: 53px;
+  max-height: 3.3125rem;
   margin-top: 6rem;
   overflow-y: visible;
   display: flex;

@@ -13,15 +13,19 @@ const SelectionArrowButton = ({
   direction: "left" | "right";
   onClick: () => void;
 }) => {
+  const imageSizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw";
+
   return (
-    <Image
-      width={38}
-      height={53}
-      src={`/${direction}-double-arrow.svg`}
-      alt="Left Arrow Icon"
-      className={styles.selectionArrow}
-      onClick={onClick}
-    />
+    <div className={styles.selectionArrow}>
+      <Image
+        fill
+        sizes={imageSizes}
+        src={`/${direction}-double-arrow.svg`}
+        alt="Left Arrow Icon"
+        className={styles.selectionArrow}
+        onClick={onClick}
+      />
+    </div>
   );
 };
 

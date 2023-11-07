@@ -11,20 +11,20 @@
   z-index: 0;
 }
 .home {
-  height: 1081px;
+  height: calc(1rem * 1081 * 0.0625);
 }
 .service {
-  height: 1436px;
+  height: calc(1rem * 1436 * 0.0625);
 }
 .showreels {
-  height: 1081px;
+  height: calc(1rem * 1081 * 0.0625);
 }
 .contact {
-  height: 1328px;
+  height: calc(1rem * 1328 * 0.0625);
 }
 .client {
-  height: 1097px;
+  height: calc(1rem * 1097 * 0.0625);
 }
 .footer {
-  height: 1328px;
+  height: calc(1rem * 1328 * 0.0625);
 }

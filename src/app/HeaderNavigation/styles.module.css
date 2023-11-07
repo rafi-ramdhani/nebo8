@@ -19,7 +19,7 @@
 .headerNavigation > div {
   width: 100%;
   height: 100%;
-  max-width: 1600px;
+  max-width: calc(1rem * 1600 * 0.0625);
   padding: 0rem 2rem;
   display: flex;
   align-items: center;
@@ -59,9 +59,14 @@
 }
 
 .navButtonContainer {
-  width: 51px;
-  height: 51px;
+  width: calc(1rem * 51 * 0.0625);
+  height: calc(1rem * 51 * 0.0625);
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.navButton {
+  width: calc(1rem * 30 * 0.0625);
+  height: calc(1rem * 40 * 0.0625);
+  position: relative;
 }
