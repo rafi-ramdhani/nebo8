@@ -12,9 +12,31 @@ html {
   font-size: 16px;
   font-family: Helvetica, sans-serif;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   overflow-x: hidden;
   background-color: black;
+}
+
+@media only screen and (min-width: 0px) {
+  html {
+    font-size: 10px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  html {
+    font-size: 16px;
+  }
 }

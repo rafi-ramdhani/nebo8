@@ -8,38 +8,56 @@
 }
 
 .whatsappContainer {
-  width: 420px;
-  height: 350px;
+  width: calc(1rem * 420 * 0.0625);
+  height: calc(1rem * 350 * 0.0625);
   position: absolute;
   left: 8rem;
   bottom: 8rem;
-  z-index: 3;
+  z-index: 5;
 }
 
 .when {
+  width: calc(1rem * 1418 * 0.0625);
+  height: calc(1rem * 483 * 0.0625);
   position: absolute;
   top: 0;
   left: 8rem;
   z-index: 3;
 }
 .brief {
+  width: calc(1rem * 330 * 0.0625);
+  height: calc(1rem * 265 * 0.0625);
   position: absolute;
   left: 0;
   bottom: 0;
   z-index: 3;
 }
 .whatsapp {
+  width: calc(1rem * 148 * 0.0625);
+  height: calc(1rem * 148 * 0.0625);
   position: absolute;
   right: 0;
-  z-index: 3;
+  z-index: 5;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+.whatsapp:hover {
+  scale: 1.1;
+}
+.whatsapp:active {
+  scale: 1;
 }
 .astronaut {
+  width: calc(1rem * 1031 * 0.0625);
+  height: calc(1rem * 846 * 0.0625);
   position: absolute;
   bottom: 0;
-  left: calc(50% - 515px);
+  left: calc(50% - calc(1rem * 515 * 0.0625));
   z-index: 3;
 }
 .rocket {
+  width: calc(1rem * 1131 * 0.0625);
+  height: calc(1rem * 1237 * 0.0625);
   position: absolute;
   right: 0;
   bottom: 0;
