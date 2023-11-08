@@ -63,3 +63,93 @@
   bottom: 0;
   z-index: 2;
 }
+
+@media only screen and (max-width: 1280px) {
+  .when {
+    width: calc(1rem * 1418 * 0.0625 * 0.8);
+    height: calc(1rem * 483 * 0.0625 * 0.8);
+    left: 6rem;
+  }
+  .whatsappContainer {
+    width: calc(1rem * 420 * 0.0625 * 0.8);
+    height: calc(1rem * 350 * 0.0625 * 0.8);
+    left: 6rem;
+  }
+  .whatsapp {
+    width: calc(1rem * 148 * 0.0625 * 0.8);
+    height: calc(1rem * 148 * 0.0625 * 0.8);
+  }
+  .brief {
+    width: calc(1rem * 330 * 0.0625 * 0.8);
+    height: calc(1rem * 265 * 0.0625 * 0.8);
+  }
+  .rocket {
+    width: calc(1rem * 1131 * 0.0625 * 0.8);
+    height: calc(1rem * 1237 * 0.0625 * 0.8);
+  }
+  .astronaut {
+    width: calc(1rem * 1031 * 0.0625 * 0.8);
+    height: calc(1rem * 846 * 0.0625 * 0.8);
+    left: calc(50% - calc(1rem * 515 * 0.0625 * 0.8));
+  }
+}
+@media only screen and (max-width: 768px) {
+  .when {
+    width: calc(1rem * 1418 * 0.0625 * 0.8);
+    height: calc(1rem * 483 * 0.0625 * 0.8);
+    left: 6rem;
+  }
+  .whatsappContainer {
+    width: calc(1rem * 420 * 0.0625 * 0.8);
+    height: calc(1rem * 350 * 0.0625 * 0.8);
+    left: 6rem;
+  }
+  .whatsapp {
+    width: calc(1rem * 148 * 0.0625 * 0.8);
+    height: calc(1rem * 148 * 0.0625 * 0.8);
+  }
+  .brief {
+    width: calc(1rem * 330 * 0.0625 * 0.8);
+    height: calc(1rem * 265 * 0.0625 * 0.8);
+  }
+  .rocket {
+    width: calc(1rem * 1131 * 0.0625 * 0.8);
+    height: calc(1rem * 1237 * 0.0625 * 0.8);
+  }
+  .astronaut {
+    width: calc(1rem * 1031 * 0.0625 * 0.8);
+    height: calc(1rem * 846 * 0.0625 * 0.8);
+    left: calc(50% - calc(1rem * 515 * 0.0625 * 0.8));
+  }
+}
+@media only screen and (max-width: 450px) {
+  .when {
+    width: calc(1rem * 1418 * 0.0625 * 0.5);
+    height: calc(1rem * 483 * 0.0625 * 0.5);
+    left: 6rem;
+    top: 30rem;
+  }
+  .whatsappContainer {
+    width: calc(1rem * 420 * 0.0625 * 0.5);
+    height: calc(1rem * 350 * 0.0625 * 0.5);
+    left: 6rem;
+    bottom: 20rem;
+  }
+  .whatsapp {
+    width: calc(1rem * 148 * 0.0625 * 0.5);
+    height: calc(1rem * 148 * 0.0625 * 0.5);
+  }
+  .brief {
+    width: calc(1rem * 330 * 0.0625 * 0.5);
+    height: calc(1rem * 265 * 0.0625 * 0.5);
+  }
+  .rocket {
+    width: calc(1rem * 1131 * 0.0625 * 0.5);
+    height: calc(1rem * 1237 * 0.0625 * 0.5);
+  }
+  .astronaut {
+    width: calc(1rem * 1031 * 0.0625 * 0.5);
+    height: calc(1rem * 846 * 0.0625 * 0.5);
+    left: calc(50% - calc(1rem * 515 * 0.0625 * 0.5));
+  }
+}

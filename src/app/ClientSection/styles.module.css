@@ -17,11 +17,14 @@
 
 .clientsContainer {
   width: 90rem;
+  max-width: 90%;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 4rem;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 10;
 }
 
 .astronaut {
@@ -37,6 +40,26 @@
   position: absolute;
   bottom: -12rem;
   right: -26rem;
+}
+@media only screen and (max-width: 768px) {
+  .astronaut {
+    bottom: -40rem;
+  }
+  .spaceship {
+    right: -26rem;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .astronaut {
+    width: calc(1rem * 490 * 0.0625 * 0.5);
+    height: calc(1rem * 1104 * 0.0625 * 0.5);
+    bottom: -20rem;
+  }
+  .spaceship {
+    width: calc(1rem * 1191 * 0.0625 * 0.5);
+    height: calc(1rem * 794 * 0.0625 * 0.5);
+    right: -6rem;
+  }
 }
 
 .bi {

@@ -24,6 +24,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  overflow-x: hidden;
 }
 
 .headerNavigation nav {
@@ -33,6 +34,7 @@
   background-color: var(--nav-bg);
   border-radius: 1.25rem;
   padding: 0rem 1rem;
+  overflow-x: hidden;
 }
 
 .headerNavigation nav ul {
@@ -40,13 +42,26 @@
   display: flex;
   align-items: center;
   gap: 2rem;
+  overflow-x: hidden;
 }
 
 .headerNavigation nav ul li {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   height: 100%;
   list-style: none;
+  position: relative;
+}
+.highlight {
+  position: absolute;
+  bottom: 0;
+  height: 0.5rem;
+  width: 80%;
+  border-top-left-radius: 0.2rem;
+  border-top-right-radius: 0.2rem;
+  background-color: #d9d9d9;
 }
 
 .headerNavigation nav ul li a {
@@ -64,6 +79,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition:
+    rotate 0.2s ease-in,
+    scale 0.1s ease-in,
+    background-color 0.2s ease-in;
+  cursor: pointer;
+  border-radius: 100rem;
+}
+.navButtonContainer:hover {
+  scale: 1.1;
+}
+.navButtonContainer:active {
+  scale: 1;
 }
 .navButton {
   width: calc(1rem * 30 * 0.0625);

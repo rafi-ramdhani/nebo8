@@ -1,6 +1,7 @@
 .serviceContent {
   width: 100%;
   max-width: 1600px;
+  max-width: calc(1rem * 1600 * 0.0625);
   padding-top: 10rem;
   display: flex;
   flex-direction: column;
@@ -18,7 +19,7 @@
   transition: all 100ms ease-in;
 }
 .selectionArrow:hover {
-  scale: 1.2;
+  scale: 1.1;
 }
 .selectionArrow:active {
   scale: 1;

@@ -1,6 +1,7 @@
 .homeContent {
   width: 100%;
   max-width: 1600px;
+  max-width: calc(1rem * 1600 * 0.0625);
   padding-top: 10rem;
   display: flex;
   flex-direction: column;
@@ -10,7 +11,7 @@
 }
 
 .journeyText {
-  max-width: 600px;
+  max-width: calc(1rem * 600 * 0.0625);
   font-size: 5rem;
   font-weight: 900;
   text-transform: uppercase;
@@ -22,6 +23,9 @@
 }
 
 .doubleArrow {
+  width: calc(1rem * 32 * 0.0625);
+  height: calc(1rem * 34 * 0.0625);
+  position: relative;
   margin-top: 5rem;
   animation-name: upAndDown;
   animation-duration: 1.5s;
