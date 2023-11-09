@@ -28,6 +28,7 @@
 }
 
 .headerNavigation nav {
+  height: 4rem;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -35,6 +36,7 @@
   border-radius: 1.25rem;
   padding: 0rem 1rem;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .headerNavigation nav ul {

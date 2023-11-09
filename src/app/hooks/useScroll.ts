@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 
 type Direction = "up" | "down" | "";
 
@@ -6,10 +6,21 @@ const useScroll = () => {
   const [scrollDir, setScrollDir] = useState<Direction>("");
   const [isDisabled, setIsDisabled] = useState(false);
 
+  const resetScrollRef = useRef<NodeJS.Timeout>();
+
   const disableDetection = useCallback(() => setIsDisabled(true), []);
   const enableDetection = useCallback(() => setIsDisabled(false), []);
 
-  const resetDirection = () => setScrollDir("");
+  const resetDirection = useCallback(() => setScrollDir(""), []);
+
+  const resetScroll = useCallback(() => {
+    disableDetection();
+    clearTimeout(resetScrollRef.current);
+    resetScrollRef.current = setTimeout(() => {
+      resetDirection();
+      enableDetection();
+    }, 1000);
+  }, [disableDetection, enableDetection, resetDirection]);
 
   useEffect(() => {
     if (isDisabled) return;
@@ -38,16 +49,13 @@ const useScroll = () => {
     };
 
     window.addEventListener("scroll", onScroll);
-    console.log(scrollDir);
 
     return () => window.removeEventListener("scroll", onScroll);
   }, [scrollDir, isDisabled]);
 
   return {
     direction: scrollDir,
-    resetDirection,
-    enableDetection,
-    disableDetection,
+    resetScroll,
   };
 };
 

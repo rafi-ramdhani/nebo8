@@ -4,7 +4,7 @@ import styles from "./styles.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import NeboLogo from "../components/NeboLogo";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useScroll } from "../hooks";
 
 type Navigation = "home" | "service" | "showreels" | "contact" | "";
@@ -14,14 +14,11 @@ const HeaderNavigation = () => {
   const [showNavigations, setShowNavigations] = useState(true);
   const [selectedNavigation, setSelectedNavigation] = useState<Navigation>("");
 
-  const { direction, resetDirection, enableDetection, disableDetection } =
-    useScroll();
+  const { direction, resetScroll } = useScroll();
 
   const imageSizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw";
 
   const navigations: Navigation[] = ["home", "service", "showreels", "contact"];
-
-  const resetScrollRef = useRef<NodeJS.Timeout>();
 
   const handleClickToggle = () => {
     setShowNavigations((prev) => !prev);
@@ -29,12 +26,7 @@ const HeaderNavigation = () => {
 
   const handleSelectNavigation = (navigation: Navigation) => {
     setSelectedNavigation(navigation);
-    disableDetection();
-    clearTimeout(resetScrollRef.current);
-    resetScrollRef.current = setTimeout(() => {
-      resetDirection();
-      enableDetection();
-    }, 1000);
+    resetScroll();
   };
 
   useEffect(() => {
@@ -45,11 +37,9 @@ const HeaderNavigation = () => {
   useEffect(() => {
     if (isFirstRender) {
       setIsFirstRender(false);
-      disableDetection();
-      const enableTimeout = setTimeout(enableDetection, 1000);
-      return () => clearTimeout(enableTimeout);
+      resetScroll();
     }
-  }, [isFirstRender, enableDetection, disableDetection]);
+  }, [isFirstRender, resetScroll]);
 
   const hidingStyle = {
     transition: "all 0.2s ease-in",
