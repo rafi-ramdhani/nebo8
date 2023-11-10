@@ -3,6 +3,7 @@ import { useState, useEffect, useCallback, useRef } from "react";
 type Direction = "up" | "down" | "";
 
 const useScroll = () => {
+  const [scrollY, setScrollY] = useState(0);
   const [scrollDir, setScrollDir] = useState<Direction>("");
   const [isDisabled, setIsDisabled] = useState(false);
 
@@ -25,17 +26,20 @@ const useScroll = () => {
   useEffect(() => {
     if (isDisabled) return;
 
-    const threshold = 100;
+    const THRESHOLD = 100;
+
     let lastScrollY = window.scrollY;
     let ticking = false;
 
     const updateScrollDir = () => {
       const scrollY = window.scrollY;
+      setScrollY(scrollY);
 
-      if (Math.abs(scrollY - lastScrollY) < threshold) {
+      if (Math.abs(scrollY - lastScrollY) < THRESHOLD) {
         ticking = false;
         return;
       }
+
       setScrollDir(scrollY > lastScrollY ? "down" : "up");
       lastScrollY = scrollY > 0 ? scrollY : 0;
       ticking = false;
@@ -54,6 +58,7 @@ const useScroll = () => {
   }, [scrollDir, isDisabled]);
 
   return {
+    scrollY,
     direction: scrollDir,
     resetScroll,
   };

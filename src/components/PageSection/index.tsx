@@ -1,3 +1,4 @@
+import { forwardRef } from "react";
 import { BackgroundImage } from "..";
 import styles from "./styles.module.css";
 
@@ -6,15 +7,19 @@ type PageSectionProps = {
   children?: React.ReactNode;
 };
 
-const PageSection = ({ section, children }: PageSectionProps) => {
-  return (
-    <section id={`${section}`} className={styles.pageSection}>
-      <div className={`${styles.backgroundContainer} ${styles[section]}`}>
-        <BackgroundImage type={section} />
-        {children}
-      </div>
-    </section>
-  );
-};
+const PageSection = forwardRef<HTMLDivElement, PageSectionProps>(
+  ({ section, children }, ref) => {
+    return (
+      <section ref={ref} id={`${section}`} className={styles.pageSection}>
+        <div className={`${styles.backgroundContainer} ${styles[section]}`}>
+          <BackgroundImage type={section} />
+          {children}
+        </div>
+      </section>
+    );
+  }
+);
+
+PageSection.displayName = "PageSection";
 
 export default PageSection;
