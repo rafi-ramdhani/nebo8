@@ -1,7 +1,5 @@
-import Image from "next/image";
 import styles from "./styles.module.css";
-import { PageSection } from "@/components";
-import { IMAGE_SIZES } from "@/constants/sizes";
+import { ImageOptimized, PageSection } from "@/components";
 
 const ClientSection = () => {
   const clients = [
@@ -24,32 +22,17 @@ const ClientSection = () => {
           {clients.map((client) => {
             return (
               <div key={client} className={styles[client]}>
-                <Image
-                  fill
-                  sizes={IMAGE_SIZES}
-                  src={`/${client}.png`}
-                  alt={client}
-                />
+                <ImageOptimized src={`/${client}.png`} alt={client} />
               </div>
             );
           })}
         </div>
 
         <div className={styles.astronaut}>
-          <Image
-            fill
-            sizes={IMAGE_SIZES}
-            src="/astronaut2.png"
-            alt="Astronaut Image"
-          />
+          <ImageOptimized src="/astronaut2.png" alt="Astronaut Image" />
         </div>
         <div className={styles.spaceship}>
-          <Image
-            fill
-            sizes={IMAGE_SIZES}
-            src="/spaceship.png"
-            alt="Spaceship Image"
-          />
+          <ImageOptimized src="/spaceship.png" alt="Spaceship Image" />
         </div>
       </div>
     </PageSection>

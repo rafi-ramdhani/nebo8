@@ -1,5 +1,5 @@
-import Image from "next/image";
 import styles from "./styles.module.css";
+import { ImageOptimized } from "..";
 
 type BackgroundImageProps = {
   type: "home" | "service" | "showreels" | "contact" | "client" | "footer";
@@ -7,12 +7,11 @@ type BackgroundImageProps = {
 
 const BackgroundImage = ({ type }: BackgroundImageProps) => {
   return (
-    <Image
-      fill
+    <ImageOptimized
       priority
-      className={styles.backgroundImage}
       src={`/${type}-background.png`}
       alt="Background Image"
+      className={styles.backgroundImage}
     />
   );
 };

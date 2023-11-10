@@ -1,11 +1,9 @@
 "use client";
 
-import { PageSection, YoutubeVideo } from "@/components";
+import { ImageOptimized, PageSection, YoutubeVideo } from "@/components";
 import styles from "./styles.module.css";
-import Image from "next/image";
 import useService from "./useService";
 import NeboLogo from "@/components/NeboLogo";
-import { IMAGE_SIZES } from "@/constants/sizes";
 
 const SelectionArrowButton = ({
   direction,
@@ -16,9 +14,7 @@ const SelectionArrowButton = ({
 }) => {
   return (
     <div className={styles.selectionArrow}>
-      <Image
-        fill
-        sizes={IMAGE_SIZES}
+      <ImageOptimized
         src={`/${direction}-double-arrow.svg`}
         alt="Left Arrow Icon"
         className={styles.selectionArrow}

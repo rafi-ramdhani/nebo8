@@ -1,11 +1,10 @@
 "use client";
 
 import styles from "./styles.module.css";
-import Image from "next/image";
 import NeboLogo from "@/components/NeboLogo";
-import { IMAGE_SIZES } from "@/constants/sizes";
 import useHeaderNavigation from "./useHeaderNavigation";
 import NavigationItem from "./NavigationItem";
+import { ImageOptimized } from "@/components";
 
 const HeaderNavigation = () => {
   const {
@@ -55,12 +54,7 @@ const HeaderNavigation = () => {
             onClick={handleShowNavigationToggle}
           >
             <div className={styles.navButton}>
-              <Image
-                fill
-                sizes={IMAGE_SIZES}
-                src="/nav-button.svg"
-                alt="Navigation Button"
-              />
+              <ImageOptimized src="/nav-button.svg" alt="Navigation Button" />
             </div>
           </div>
         </nav>
