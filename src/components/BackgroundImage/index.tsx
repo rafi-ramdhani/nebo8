@@ -6,24 +6,10 @@ type BackgroundImageProps = {
 };
 
 const BackgroundImage = ({ type }: BackgroundImageProps) => {
-  if (type === "home") {
-    return (
-      <Image
-        fill
-        priority
-        quality={100}
-        className={styles.backgroundImage}
-        src={`/giphy.gif`}
-        alt="Background Image"
-      />
-    );
-  }
-
   return (
     <Image
       fill
       priority
-      quality={100}
       className={styles.backgroundImage}
       src={`/${type}-background.png`}
       alt="Background Image"
