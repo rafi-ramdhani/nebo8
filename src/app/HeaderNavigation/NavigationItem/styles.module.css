@@ -1,0 +1,9 @@
+.highlight {
+  position: absolute;
+  bottom: 0;
+  height: 0.5rem;
+  width: 80%;
+  border-top-left-radius: 0.2rem;
+  border-top-right-radius: 0.2rem;
+  background-color: #d9d9d9;
+}

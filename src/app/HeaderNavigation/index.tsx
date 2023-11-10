@@ -1,49 +1,20 @@
 "use client";
 
-import { useScroll } from "@/hooks";
 import styles from "./styles.module.css";
 import Image from "next/image";
-import Link from "next/link";
-import { useEffect, useState } from "react";
 import NeboLogo from "@/components/NeboLogo";
 import { IMAGE_SIZES } from "@/constants/sizes";
-
-type Navigation = "home" | "service" | "showreels" | "contact" | "";
+import useHeaderNavigation from "./useHeaderNavigation";
+import NavigationItem from "./NavigationItem";
 
 const HeaderNavigation = () => {
-  const [isFirstRender, setIsFirstRender] = useState(true);
-  const [showNavigations, setShowNavigations] = useState(true);
-  const [selectedNavigation, setSelectedNavigation] = useState<Navigation>("");
-
-  const { direction, resetScroll } = useScroll();
-
-  const navigations: Navigation[] = ["home", "service", "showreels", "contact"];
-
-  const handleClickToggle = () => {
-    setShowNavigations((prev) => !prev);
-  };
-
-  const handleSelectNavigation = (navigation: Navigation) => {
-    setSelectedNavigation(navigation);
-    resetScroll();
-  };
-
-  useEffect(() => {
-    const isDown = direction === "down";
-    if (isDown && showNavigations) setShowNavigations(false);
-  }, [direction, showNavigations]);
-
-  useEffect(() => {
-    if (isFirstRender) {
-      setIsFirstRender(false);
-      resetScroll();
-    }
-  }, [isFirstRender, resetScroll]);
-
-  const hidingStyle = {
-    transition: "all 0.2s ease-in",
-    translate: showNavigations ? "0rem" : "40rem 0rem",
-  };
+  const {
+    navigations,
+    showNavigations,
+    selectedNavigation,
+    handleSelectNavigation,
+    handleShowNavigationToggle,
+  } = useHeaderNavigation();
 
   const navStyle = {
     backgroundColor: !showNavigations
@@ -66,19 +37,14 @@ const HeaderNavigation = () => {
         <nav style={navStyle}>
           <ul>
             {navigations.map((navigation) => {
-              const isSelected = selectedNavigation === navigation;
-              const showHighlight = isSelected && showNavigations;
-
               return (
-                <li key={navigation} style={hidingStyle}>
-                  <Link
-                    href={`#${navigation}`}
-                    onClick={() => handleSelectNavigation(navigation)}
-                  >
-                    {navigation}
-                  </Link>
-                  {showHighlight && <div className={styles.highlight} />}
-                </li>
+                <NavigationItem
+                  key={navigation}
+                  navigation={navigation}
+                  showNavigations={showNavigations}
+                  selectedNavigation={selectedNavigation}
+                  onSelect={handleSelectNavigation}
+                />
               );
             })}
           </ul>
@@ -86,7 +52,7 @@ const HeaderNavigation = () => {
           <div
             className={styles.navButtonContainer}
             style={navButtonStyle}
-            onClick={handleClickToggle}
+            onClick={handleShowNavigationToggle}
           >
             <div className={styles.navButton}>
               <Image
