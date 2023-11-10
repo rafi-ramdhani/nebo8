@@ -1,6 +1,7 @@
 import Image from "next/image";
-import { PageSection } from "../components";
 import styles from "./styles.module.css";
+import { PageSection } from "@/components";
+import { IMAGE_SIZES } from "@/constants/sizes";
 
 const ClientSection = () => {
   const clients = [
@@ -15,8 +16,6 @@ const ClientSection = () => {
     "logitech",
   ];
 
-  const imageSizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw";
-
   return (
     <PageSection section="client">
       <div className={styles.clientContent}>
@@ -27,7 +26,7 @@ const ClientSection = () => {
               <div key={client} className={styles[client]}>
                 <Image
                   fill
-                  sizes={imageSizes}
+                  sizes={IMAGE_SIZES}
                   src={`/${client}.png`}
                   alt={client}
                 />
@@ -39,7 +38,7 @@ const ClientSection = () => {
         <div className={styles.astronaut}>
           <Image
             fill
-            sizes={imageSizes}
+            sizes={IMAGE_SIZES}
             src="/astronaut2.png"
             alt="Astronaut Image"
           />
@@ -47,7 +46,7 @@ const ClientSection = () => {
         <div className={styles.spaceship}>
           <Image
             fill
-            sizes={imageSizes}
+            sizes={IMAGE_SIZES}
             src="/spaceship.png"
             alt="Spaceship Image"
           />

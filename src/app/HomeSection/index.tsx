@@ -1,12 +1,11 @@
 import Image from "next/image";
-import { PageSection } from "../components";
-import NeboLogo from "../components/NeboLogo";
+import { PageSection } from "@/components";
 import styles from "./styles.module.css";
 import Link from "next/link";
+import NeboLogo from "@/components/NeboLogo";
+import { IMAGE_SIZES } from "@/constants/sizes";
 
 const HomeSection = () => {
-  const imageSizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw";
-
   return (
     <PageSection section="home">
       <div className={styles.homeContent}>
@@ -16,7 +15,7 @@ const HomeSection = () => {
           <div className={styles.doubleArrow}>
             <Image
               fill
-              sizes={imageSizes}
+              sizes={IMAGE_SIZES}
               src="/double-arrow.svg"
               alt="Double Arrow Icon"
             />

@@ -1,15 +1,14 @@
 import Image from "next/image";
 import styles from "./styles.module.css";
+import { IMAGE_SIZES } from "@/constants/sizes";
 
 const NeboLogo = () => {
-  const imageSizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw";
-
   return (
     <div className={styles.neboLogo}>
       <Image
         fill
         priority
-        sizes={imageSizes}
+        sizes={IMAGE_SIZES}
         src="/nebo-logo.svg"
         alt="Nebo8 Logo"
       />

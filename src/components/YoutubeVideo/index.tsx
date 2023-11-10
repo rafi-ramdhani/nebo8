@@ -1,6 +1,6 @@
 "use client";
 
-import { useDimensions } from "@/app/hooks";
+import { useDimensions } from "@/hooks";
 import styles from "./styles.module.css";
 import YouTube, { YouTubeProps } from "react-youtube";
 

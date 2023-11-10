@@ -1,11 +1,12 @@
 "use client";
 
+import { useScroll } from "@/hooks";
 import styles from "./styles.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import NeboLogo from "../components/NeboLogo";
-import { useCallback, useEffect, useRef, useState } from "react";
-import { useScroll } from "../hooks";
+import { useEffect, useState } from "react";
+import NeboLogo from "@/components/NeboLogo";
+import { IMAGE_SIZES } from "@/constants/sizes";
 
 type Navigation = "home" | "service" | "showreels" | "contact" | "";
 
@@ -15,8 +16,6 @@ const HeaderNavigation = () => {
   const [selectedNavigation, setSelectedNavigation] = useState<Navigation>("");
 
   const { direction, resetScroll } = useScroll();
-
-  const imageSizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw";
 
   const navigations: Navigation[] = ["home", "service", "showreels", "contact"];
 
@@ -92,7 +91,7 @@ const HeaderNavigation = () => {
             <div className={styles.navButton}>
               <Image
                 fill
-                sizes={imageSizes}
+                sizes={IMAGE_SIZES}
                 src="/nav-button.svg"
                 alt="Navigation Button"
               />

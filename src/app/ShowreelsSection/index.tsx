@@ -1,15 +1,14 @@
 import Image from "next/image";
-import { PageSection } from "../components";
 import styles from "./styles.module.css";
+import { PageSection } from "@/components";
+import { IMAGE_SIZES } from "@/constants/sizes";
 
 const ShowreelsSection = () => {
-  const imageSizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw";
-
   return (
     <PageSection section="showreels">
       <div className={styles.showreelsContent}>
         <div className={styles.moon}>
-          <Image fill sizes={imageSizes} src="/moon.png" alt="Moon Image" />
+          <Image fill sizes={IMAGE_SIZES} src="/moon.png" alt="Moon Image" />
         </div>
       </div>
     </PageSection>

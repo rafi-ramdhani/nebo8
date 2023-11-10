@@ -1,10 +1,11 @@
 "use client";
 
-import { PageSection, YoutubeVideo } from "../components";
-import NeboLogo from "../components/NeboLogo";
+import { PageSection, YoutubeVideo } from "@/components";
 import styles from "./styles.module.css";
 import Image from "next/image";
 import useService from "./useService";
+import NeboLogo from "@/components/NeboLogo";
+import { IMAGE_SIZES } from "@/constants/sizes";
 
 const SelectionArrowButton = ({
   direction,
@@ -13,13 +14,11 @@ const SelectionArrowButton = ({
   direction: "left" | "right";
   onClick: () => void;
 }) => {
-  const imageSizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw";
-
   return (
     <div className={styles.selectionArrow}>
       <Image
         fill
-        sizes={imageSizes}
+        sizes={IMAGE_SIZES}
         src={`/${direction}-double-arrow.svg`}
         alt="Left Arrow Icon"
         className={styles.selectionArrow}
