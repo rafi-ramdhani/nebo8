@@ -24,7 +24,7 @@ const ImageOptimized = ({
       fill
       src={src}
       alt={alt}
-      quality={50}
+      quality={75}
       style={style}
       sizes={IMAGE_SIZES}
       priority={priority}
