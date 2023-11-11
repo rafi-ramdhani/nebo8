@@ -5,8 +5,9 @@ import { CSSProperties } from "react";
 type ImageOptimizedProps = {
   src: string;
   alt: string;
-  priority?: boolean;
   style?: CSSProperties;
+  quality?: number;
+  priority?: boolean;
   className?: string;
   onClick?: () => void;
 };
@@ -15,6 +16,7 @@ const ImageOptimized = ({
   src,
   alt,
   style,
+  quality = 75,
   priority,
   className,
   onClick,
@@ -24,8 +26,8 @@ const ImageOptimized = ({
       fill
       src={src}
       alt={alt}
-      quality={75}
       style={style}
+      quality={quality}
       sizes={IMAGE_SIZES}
       priority={priority}
       className={className}

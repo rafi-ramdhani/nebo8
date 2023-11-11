@@ -11,6 +11,7 @@ const BackgroundImage = ({ type }: BackgroundImageProps) => {
       priority
       src={`/${type}-background.png`}
       alt="Background Image"
+      quality={type === "home" ? 100 : 75}
       className={styles.backgroundImage}
     />
   );
