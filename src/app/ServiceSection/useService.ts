@@ -269,14 +269,14 @@ const useService = () => {
     if (!isReadyToSelect) {
       const isReadyToSelectTimeout = setTimeout(() => {
         setIsReadyToSelect(true);
-      }, 200);
+      }, 100);
 
       return () => clearTimeout(isReadyToSelectTimeout);
     }
 
     const selectServiceTimeout = setTimeout(() => {
       setSelectedService(services[selectedServiceIndex]);
-    }, 200);
+    }, 100);
 
     return () => clearTimeout(selectServiceTimeout);
   }, [selectedServiceIndex, services, isReadyToSelect]);
