@@ -1,28 +1,12 @@
 "use client";
 
-import { ImageOptimized, PageSection, YoutubeVideo } from "@/components";
+import { PageSection, YoutubeVideo } from "@/components";
 import styles from "./styles.module.css";
 import useService from "./useService";
 import NeboLogo from "@/components/NeboLogo";
-
-const SelectionArrowButton = ({
-  direction,
-  onClick,
-}: {
-  direction: "left" | "right";
-  onClick: () => void;
-}) => {
-  return (
-    <div className={styles.selectionArrow}>
-      <ImageOptimized
-        src={`/${direction}-double-arrow.svg`}
-        alt="Left Arrow Icon"
-        className={styles.selectionArrow}
-        onClick={onClick}
-      />
-    </div>
-  );
-};
+import SelectionArrowButton from "./SelectionArrowButton";
+import ServiceDescription from "./ServiceDescription";
+import OrangeLine from "./OrangeLine";
 
 const ServiceSection = () => {
   const { services, selectedService, handleSelectService } = useService();
@@ -31,7 +15,11 @@ const ServiceSection = () => {
     <PageSection section="service">
       <div className={styles.serviceContent}>
         <YoutubeVideo videoId={selectedService.videoId} />
+
+        <OrangeLine />
+
         <NeboLogo />
+
         <div className={styles.selection}>
           <SelectionArrowButton
             direction="left"
@@ -57,6 +45,8 @@ const ServiceSection = () => {
           />
         </div>
       </div>
+
+      <ServiceDescription service={selectedService} />
     </PageSection>
   );
 };

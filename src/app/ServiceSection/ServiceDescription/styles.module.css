@@ -1,0 +1,26 @@
+.serviceDescription {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 5rem;
+  z-index: 10;
+  height: calc(1rem * 437 * 0.0625);
+}
+
+.backgroundImage {
+  object-fit: cover;
+  object-position: center;
+}
+
+.description {
+  max-width: 50%;
+  margin-top: 5rem;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  position: relative;
+  z-index: 20;
+}

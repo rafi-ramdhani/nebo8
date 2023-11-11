@@ -1,0 +1,13 @@
+.orangeLineContainer {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  position: absolute;
+  top: 20rem;
+}
+
+.orangeLine {
+  --width: calc(1rem * 1412 * 0.0625);
+  width: var(--width);
+  height: calc(1rem * 485 * 0.0625);
+}

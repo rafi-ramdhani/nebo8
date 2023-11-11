@@ -1,3 +1,10 @@
+.youtubeContainer {
+  width: fit-content;
+  height: fit-content;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
 .youtubeVideo {
   width: 100%;
   height: fit-content;

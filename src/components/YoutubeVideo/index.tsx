@@ -48,7 +48,9 @@ const YoutubeVideo = ({ videoId = "2g811Eo7K8U" }: YoutubeVideoProps) => {
   if (isDeviceTBD) return null;
 
   return (
-    <YouTube opts={opts} videoId={videoId} className={styles.youtubeVideo} />
+    <div className={styles.youtubeContainer}>
+      <YouTube opts={opts} videoId={videoId} className={styles.youtubeVideo} />
+    </div>
   );
 };
 

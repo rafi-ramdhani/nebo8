@@ -1,0 +1,13 @@
+.selectionArrow {
+  width: calc(1rem * 38 * 0.0625);
+  height: calc(1rem * 53 * 0.0625);
+  position: relative;
+  cursor: pointer;
+  transition: all 100ms ease-in;
+}
+.selectionArrow:hover {
+  scale: 1.1;
+}
+.selectionArrow:active {
+  scale: 1;
+}

@@ -1,5 +1,37 @@
 import { useEffect, useMemo, useState } from "react";
 import styles from "./styles.module.css";
+import {
+  FIFTH_SERVICE_NAME,
+  FIFTH_VIDEO_ID,
+  FIRST_SERVICE_NAME,
+  FIRST_VIDEO_ID,
+  FOURTH_SERVICE_NAME,
+  FOURTH_VIDEO_ID,
+  FifthServiceName,
+  FifthVideoId,
+  FirstServiceName,
+  FirstVideoId,
+  FourthServiceName,
+  FourthVideoId,
+  SECOND_SERVICE_NAME,
+  SECOND_VIDEO_ID,
+  SEVENTH_SERVICE_NAME,
+  SEVENTH_VIDEO_ID,
+  SIXTH_SERVICE_NAME,
+  SIXTH_VIDEO_ID,
+  SecondServiceName,
+  SecondVideoId,
+  SeventhServiceName,
+  SeventhVideoId,
+  SixthServiceName,
+  SixthVideoId,
+  THIRD_SERVICE_NAME,
+  THIRD_VIDEO_ID,
+  ThirdServiceName,
+  ThirdVideoId,
+} from "@/constants/services";
+
+type Direction = "left" | "right";
 
 type ServiceClassName = {
   left: string;
@@ -7,40 +39,40 @@ type ServiceClassName = {
   used: string;
 };
 
-type Service =
+export type Service =
   | {
-      name: "Photograph";
-      videoId: "6y8d1oUClQE";
+      name: FirstServiceName;
+      videoId: FirstVideoId;
       className: ServiceClassName;
     }
   | {
-      name: "2D & 3D Animation";
-      videoId: "4YneDg6dH4U";
+      name: SecondServiceName;
+      videoId: SecondVideoId;
       className: ServiceClassName;
     }
   | {
-      name: "Commercial";
-      videoId: "n62M2pd0-p8";
+      name: ThirdServiceName;
+      videoId: ThirdVideoId;
       className: ServiceClassName;
     }
   | {
-      name: "Video Production";
-      videoId: "UIVhfDWSSKY";
+      name: FourthServiceName;
+      videoId: FourthVideoId;
       className: ServiceClassName;
     }
   | {
-      name: "Corporate Video";
-      videoId: "9vINAPof9Lk";
+      name: FifthServiceName;
+      videoId: FifthVideoId;
       className: ServiceClassName;
     }
   | {
-      name: "Documentary Video";
-      videoId: "U7ajKfnMby0";
+      name: SixthServiceName;
+      videoId: SixthVideoId;
       className: ServiceClassName;
     }
   | {
-      name: "Lorem Ipsum";
-      videoId: "YCMtaTi6kMQ";
+      name: SeventhServiceName;
+      videoId: SeventhVideoId;
       className: ServiceClassName;
     };
 
@@ -54,12 +86,13 @@ const serviceClassName = (
 };
 
 const useService = () => {
+  const [lastDirection, setLastDirection] = useState("");
   const [isReadyToSelect, setIsReadyToSelect] = useState(true);
   const [selectedServiceIndex, setSelectedServiceIndex] = useState(3);
 
   const [selectedService, setSelectedService] = useState<Service>({
-    name: "Video Production",
-    videoId: "UIVhfDWSSKY",
+    name: FOURTH_SERVICE_NAME,
+    videoId: FOURTH_VIDEO_ID,
     className: {
       left: serviceClassName("Four", "Left"),
       right: serviceClassName("Four", "Right"),
@@ -110,86 +143,85 @@ const useService = () => {
   const services: Service[] = useMemo(() => {
     return [
       {
-        name: "Photograph",
-        videoId: "6y8d1oUClQE",
+        name: FIRST_SERVICE_NAME,
+        videoId: FIRST_VIDEO_ID,
         className: serviceClassNames[0],
       },
       {
-        name: "2D & 3D Animation",
-        videoId: "4YneDg6dH4U",
+        name: SECOND_SERVICE_NAME,
+        videoId: SECOND_VIDEO_ID,
         className: serviceClassNames[1],
       },
       {
-        name: "Commercial",
-        videoId: "n62M2pd0-p8",
+        name: THIRD_SERVICE_NAME,
+        videoId: THIRD_VIDEO_ID,
         className: serviceClassNames[2],
       },
       {
-        name: "Video Production",
-        videoId: "UIVhfDWSSKY",
+        name: FOURTH_SERVICE_NAME,
+        videoId: FOURTH_VIDEO_ID,
         className: serviceClassNames[3],
       },
       {
-        name: "Corporate Video",
-        videoId: "9vINAPof9Lk",
+        name: FIFTH_SERVICE_NAME,
+        videoId: FIFTH_VIDEO_ID,
         className: serviceClassNames[4],
       },
       {
-        name: "Documentary Video",
-        videoId: "U7ajKfnMby0",
+        name: SIXTH_SERVICE_NAME,
+        videoId: SIXTH_VIDEO_ID,
         className: serviceClassNames[5],
       },
       {
-        name: "Lorem Ipsum",
-        videoId: "YCMtaTi6kMQ",
+        name: SEVENTH_SERVICE_NAME,
+        videoId: SEVENTH_VIDEO_ID,
         className: serviceClassNames[6],
       },
     ];
   }, [serviceClassNames]);
 
-  const handleSelect = (direction: "left" | "right") => {
+  const handleSelect = (direction: Direction) => {
     setIsReadyToSelect(false);
     if (!isReadyToSelect) return;
 
     switch (direction) {
       case "left":
-        setServiceClassNames((previousServiceClassNames) => {
-          const lastServiceClassName =
-            previousServiceClassNames[previousServiceClassNames.length - 1];
+        setServiceClassNames((prev) => {
+          const lastServiceClassName = prev[prev.length - 1];
+
           const newServiceClassNames = [
             lastServiceClassName,
-            ...previousServiceClassNames.slice(
-              0,
-              previousServiceClassNames.length - 1
-            ),
+            ...prev.slice(0, prev.length - 1),
           ].map((serviceClassName) => ({
             ...serviceClassName,
             used: serviceClassName.left,
           }));
+
           const selectedServiceIndex = newServiceClassNames.findIndex(
             ({ used }) => used.includes("serviceTextFour")
           );
+
           setSelectedServiceIndex(selectedServiceIndex);
           return newServiceClassNames;
         });
         break;
 
       case "right":
-        setServiceClassNames((previousServiceClassNames) => {
-          const firstServiceClassName = previousServiceClassNames[0];
+        setServiceClassNames((prev) => {
+          const firstServiceClassName = prev[0];
+
           const newServiceClassNames = [
-            ...previousServiceClassNames.slice(
-              1,
-              previousServiceClassNames.length
-            ),
+            ...prev.slice(1, prev.length),
             firstServiceClassName,
           ].map((serviceClassName) => ({
             ...serviceClassName,
             used: serviceClassName.right,
           }));
+
           const selectedServiceIndex = newServiceClassNames.findIndex(
             ({ used }) => used.includes("serviceTextFour")
           );
+
           setSelectedServiceIndex(selectedServiceIndex);
           return newServiceClassNames;
         });
