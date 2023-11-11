@@ -24,13 +24,22 @@ import {
   THIRD_DESCRIPTION_IMG,
   THIRD_SERVICE_NAME,
 } from "@/constants/services";
+import { useEffect, useState } from "react";
 
 type ServiceDescriptionProps = {
   service: Service;
 };
 
+type Fade = "fadeIn" | "fadeOut";
+
 const ServiceDescription = ({ service }: ServiceDescriptionProps) => {
-  const imgSrc = () => {
+  const [fadeAnimation, setFadeAnimation] = useState<Fade>("fadeIn");
+  const [displayedDescription, setDisplayedDescription] = useState<{
+    imgSrc: string;
+    description: string;
+  } | null>(null);
+
+  const imgSrc = (() => {
     switch (service.name) {
       case FIRST_SERVICE_NAME:
         return FIRST_DESCRIPTION_IMG;
@@ -49,9 +58,9 @@ const ServiceDescription = ({ service }: ServiceDescriptionProps) => {
       default:
         return "";
     }
-  };
+  })();
 
-  const description = () => {
+  const description = (() => {
     switch (service.name) {
       case FIRST_SERVICE_NAME:
         return FIRST_DESCRIPTION;
@@ -70,19 +79,36 @@ const ServiceDescription = ({ service }: ServiceDescriptionProps) => {
       default:
         return "";
     }
-  };
+  })();
 
-  if (!imgSrc()) return null;
+  useEffect(() => {
+    const hasDescription = !!imgSrc && !!description;
+    if (!hasDescription) return;
+
+    setFadeAnimation("fadeOut");
+
+    const displayTimeout = setTimeout(() => {
+      setDisplayedDescription({ imgSrc, description });
+      setFadeAnimation("fadeIn");
+    }, 200);
+
+    return () => clearTimeout(displayTimeout);
+  }, [imgSrc, description]);
+
+  const canDisplay =
+    !!displayedDescription?.imgSrc && !!displayedDescription?.description;
+
+  if (!canDisplay) return null;
 
   return (
-    <div className={styles.serviceDescription}>
+    <div className={`${styles.serviceDescription} ${styles[fadeAnimation]}`}>
       <ImageOptimized
-        src={imgSrc()}
+        src={displayedDescription.imgSrc}
         alt="Background Image"
         className={styles.backgroundImage}
       />
 
-      <h4 className={styles.description}>{description()}</h4>
+      <h4 className={styles.description}>{displayedDescription.description}</h4>
     </div>
   );
 };

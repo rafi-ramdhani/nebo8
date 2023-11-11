@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Navigation } from "../useHeaderNavigation";
-import styles from "../styles.module.css";
+import styles from "./styles.module.css";
 
 type NavigationProps = {
   navigation: Navigation;
@@ -24,10 +24,15 @@ const NavigationItem = ({
   };
 
   return (
-    <li key={navigation} style={hidingStyle}>
-      <Link href={`#${navigation}`} onClick={() => onSelect(navigation)}>
+    <li key={navigation} className={styles.navigationItem} style={hidingStyle}>
+      <Link
+        href={`#${navigation}`}
+        className={styles.navigationLink}
+        onClick={() => onSelect(navigation)}
+      >
         {navigation}
       </Link>
+
       {showHighlight && <div className={styles.highlight} />}
     </li>
   );

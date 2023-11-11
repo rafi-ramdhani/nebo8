@@ -8,6 +8,38 @@
   height: calc(1rem * 437 * 0.0625);
 }
 
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 200ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+}
+.fadeOut {
+  animation-name: fadeOut;
+  animation-duration: 200ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
 .backgroundImage {
   object-fit: cover;
   object-position: center;

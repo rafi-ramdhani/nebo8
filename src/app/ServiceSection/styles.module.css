@@ -65,24 +65,28 @@
 
 @keyframes oneLeft {
   from {
-    top: -20rem;
-    left: -50rem;
+    top: -21.5rem;
+    left: -48rem;
+    font-size: calc(2rem * 0.75 * 0.75);
   }
 
   to {
-    top: -30rem;
-    left: -40rem;
+    top: -32rem;
+    left: -35rem;
+    font-size: calc(2rem * 0.75 * 0.75 * 0.75);
   }
 }
 @keyframes twoLeft {
   from {
-    top: -8rem;
-    left: -28rem;
+    top: -7rem;
+    left: -34rem;
+    font-size: calc(2rem * 0.75);
   }
 
   to {
-    top: -20rem;
-    left: -50rem;
+    top: -21.5rem;
+    left: -48rem;
+    font-size: calc(2rem * 0.75 * 0.75);
   }
 }
 @keyframes threeLeft {
@@ -93,15 +97,16 @@
   }
 
   to {
-    top: -8rem;
-    left: -28rem;
-    font-size: 1.5rem;
+    top: -7rem;
+    left: -34rem;
+    font-size: calc(2rem * 0.75);
   }
 }
 @keyframes fourLeft {
   from {
-    top: -8rem;
-    left: 28rem;
+    top: -7rem;
+    left: 34rem;
+    font-size: calc(2rem * 0.75);
   }
 
   to {
@@ -112,40 +117,47 @@
 }
 @keyframes fiveLeft {
   from {
-    top: -20rem;
-    left: 50rem;
+    top: -21.5rem;
+    left: 48rem;
+    font-size: calc(2rem * 0.75 * 0.75);
   }
 
   to {
-    top: -8rem;
-    left: 28rem;
+    top: -7rem;
+    left: 34rem;
+    font-size: calc(2rem * 0.75);
   }
 }
 @keyframes sixLeft {
   from {
-    top: -30rem;
-    left: 40rem;
+    top: -32rem;
+    left: 35rem;
+    font-size: calc(2rem * 0.75 * 0.75 * 0.75);
   }
 
   to {
-    top: -20rem;
-    left: 50rem;
+    top: -21.5rem;
+    left: 48rem;
+    font-size: calc(2rem * 0.75 * 0.75);
   }
 }
 @keyframes sevenLeft {
   0% {
-    top: -30rem;
-    left: -40rem;
+    top: -32rem;
+    left: -35rem;
+    font-size: calc(2rem * 0.75 * 0.75 * 0.75);
   }
 
   50% {
     top: -40rem;
     left: 0rem;
+    font-size: calc(2rem * 0.75 * 0.75 * 0.75 * 0.75);
   }
 
   100% {
-    top: -30rem;
-    left: 40rem;
+    top: -32rem;
+    left: 35rem;
+    font-size: calc(2rem * 0.75 * 0.75 * 0.75);
   }
 }
 
@@ -196,83 +208,98 @@
 
 @keyframes oneRight {
   0% {
-    top: -30rem;
-    left: 40rem;
+    top: -32rem;
+    left: 35rem;
+    font-size: calc(2rem * 0.75 * 0.75 * 0.75);
   }
 
   50% {
     top: -40rem;
     left: 0rem;
+    font-size: calc(2rem * 0.75 * 0.75 * 0.75 * 0.75);
   }
 
   100% {
-    top: -30rem;
-    left: -40rem;
+    top: -32rem;
+    left: -35rem;
+    font-size: calc(2rem * 0.75 * 0.75 * 0.75);
   }
 }
 @keyframes twoRight {
   from {
-    top: -30rem;
-    left: -40rem;
+    top: -32rem;
+    left: -35rem;
+    font-size: calc(2rem * 0.75 * 0.75 * 0.75);
   }
 
   to {
-    top: -20rem;
-    left: -50rem;
+    top: -21.5rem;
+    left: -48rem;
+    font-size: calc(2rem * 0.75 * 0.75);
   }
 }
 @keyframes threeRight {
   from {
     top: -20rem;
     left: -50rem;
+    font-size: calc(2rem * 0.75 * 0.75);
   }
 
   to {
-    top: -8rem;
-    left: -28rem;
+    top: -7rem;
+    left: -34rem;
+    font-size: calc(2rem * 0.75);
   }
 }
 @keyframes fourRight {
   from {
     top: -8rem;
     left: -28rem;
+    font-size: calc(2rem * 0.75);
   }
 
   to {
     top: -1rem;
     left: 0rem;
+    font-size: 2rem;
   }
 }
 @keyframes fiveRight {
   from {
     top: -1rem;
     left: 0rem;
+    font-size: 2rem;
   }
 
   to {
-    top: -8rem;
-    left: 28rem;
+    top: -7rem;
+    left: 34rem;
+    font-size: calc(2rem * 0.75);
   }
 }
 @keyframes sixRight {
   from {
-    top: -8rem;
-    left: 28rem;
+    top: -7rem;
+    left: 34rem;
+    font-size: calc(2rem * 0.75);
   }
 
   to {
-    top: -20rem;
-    left: 50rem;
+    top: -21.5rem;
+    left: 48rem;
+    font-size: calc(2rem * 0.75 * 0.75);
   }
 }
 @keyframes sevenRight {
   from {
-    top: -20rem;
-    left: 50rem;
+    top: -21.5rem;
+    left: 48rem;
+    font-size: calc(2rem * 0.75 * 0.75);
   }
 
   to {
-    top: -30rem;
-    left: 40rem;
+    top: -32rem;
+    left: 35rem;
+    font-size: calc(2rem * 0.75 * 0.75 * 0.75);
   }
 }

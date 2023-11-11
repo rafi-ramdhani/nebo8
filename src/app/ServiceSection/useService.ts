@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import styles from "./styles.module.css";
 import {
   FIFTH_SERVICE_NAME,
@@ -86,7 +86,8 @@ const serviceClassName = (
 };
 
 const useService = () => {
-  const [lastDirection, setLastDirection] = useState("");
+  const [skipServiceSelectionDirection, setSkipServiceSelectionDirection] =
+    useState<Direction | "">("");
   const [isReadyToSelect, setIsReadyToSelect] = useState(true);
   const [selectedServiceIndex, setSelectedServiceIndex] = useState(3);
 
@@ -180,57 +181,88 @@ const useService = () => {
     ];
   }, [serviceClassNames]);
 
-  const handleSelect = (direction: Direction) => {
-    setIsReadyToSelect(false);
-    if (!isReadyToSelect) return;
+  const handleSelect = useCallback(
+    (direction: Direction) => {
+      setIsReadyToSelect(false);
+      if (!isReadyToSelect) return;
 
-    switch (direction) {
-      case "left":
-        setServiceClassNames((prev) => {
-          const lastServiceClassName = prev[prev.length - 1];
+      const EMPTY_SERVICE_INDEX = 0;
 
-          const newServiceClassNames = [
-            lastServiceClassName,
-            ...prev.slice(0, prev.length - 1),
-          ].map((serviceClassName) => ({
-            ...serviceClassName,
-            used: serviceClassName.left,
-          }));
+      switch (direction) {
+        case "left":
+          setServiceClassNames((prev) => {
+            const lastServiceClassName = prev[prev.length - 1];
 
-          const selectedServiceIndex = newServiceClassNames.findIndex(
-            ({ used }) => used.includes("serviceTextFour")
-          );
+            const newServiceClassNames = [
+              lastServiceClassName,
+              ...prev.slice(0, prev.length - 1),
+            ].map((serviceClassName) => ({
+              ...serviceClassName,
+              used: serviceClassName.left,
+            }));
 
-          setSelectedServiceIndex(selectedServiceIndex);
-          return newServiceClassNames;
-        });
-        break;
+            const selectedServiceIndex = newServiceClassNames.findIndex(
+              ({ used }) => used.includes("serviceTextFour")
+            );
 
-      case "right":
-        setServiceClassNames((prev) => {
-          const firstServiceClassName = prev[0];
+            const isEmptyServiceIndex =
+              selectedServiceIndex === EMPTY_SERVICE_INDEX;
 
-          const newServiceClassNames = [
-            ...prev.slice(1, prev.length),
-            firstServiceClassName,
-          ].map((serviceClassName) => ({
-            ...serviceClassName,
-            used: serviceClassName.right,
-          }));
+            if (isEmptyServiceIndex) {
+              setSkipServiceSelectionDirection(direction);
+            }
 
-          const selectedServiceIndex = newServiceClassNames.findIndex(
-            ({ used }) => used.includes("serviceTextFour")
-          );
+            setSelectedServiceIndex(selectedServiceIndex);
+            return newServiceClassNames;
+          });
+          break;
 
-          setSelectedServiceIndex(selectedServiceIndex);
-          return newServiceClassNames;
-        });
-        break;
+        case "right":
+          setServiceClassNames((prev) => {
+            const firstServiceClassName = prev[0];
 
-      default:
-        break;
+            const newServiceClassNames = [
+              ...prev.slice(1, prev.length),
+              firstServiceClassName,
+            ].map((serviceClassName) => ({
+              ...serviceClassName,
+              used: serviceClassName.right,
+            }));
+
+            const selectedServiceIndex = newServiceClassNames.findIndex(
+              ({ used }) => used.includes("serviceTextFour")
+            );
+
+            const isEmptyServiceIndex =
+              selectedServiceIndex === EMPTY_SERVICE_INDEX;
+
+            if (isEmptyServiceIndex) {
+              setSkipServiceSelectionDirection(direction);
+            }
+
+            setSelectedServiceIndex(selectedServiceIndex);
+            return newServiceClassNames;
+          });
+          break;
+
+        default:
+          break;
+      }
+    },
+    [isReadyToSelect]
+  );
+
+  // To skip service selection (if the service is empty)
+  useEffect(() => {
+    if (skipServiceSelectionDirection && isReadyToSelect) {
+      const skipTimeout = setTimeout(() => {
+        handleSelect(skipServiceSelectionDirection);
+        setSkipServiceSelectionDirection("");
+      }, 100);
+
+      return () => clearTimeout(skipTimeout);
     }
-  };
+  }, [isReadyToSelect, skipServiceSelectionDirection, handleSelect]);
 
   // To prevent rapid service selection
   useEffect(() => {

@@ -1,3 +1,22 @@
+.navigationItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  list-style: none;
+  position: relative;
+}
+
+.navigationLink {
+  list-style: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: white;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+
 .highlight {
   position: absolute;
   bottom: 0;
