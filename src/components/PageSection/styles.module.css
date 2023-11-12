@@ -4,7 +4,6 @@
 }
 
 .backgroundContainer {
-  width: 100%;
   display: flex;
   justify-content: center;
   position: relative;
@@ -23,7 +22,7 @@
   height: calc(1rem * 1328 * 0.0625);
 }
 .client {
-  height: calc(1rem * 1097 * 0.0625);
+  height: calc(1rem * 1225 * 0.0625);
 }
 .footer {
   height: calc(1rem * 1328 * 0.0625);

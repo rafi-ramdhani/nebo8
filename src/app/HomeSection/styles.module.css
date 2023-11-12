@@ -13,7 +13,8 @@
 .journeyText {
   max-width: calc(1rem * 900 * 0.0625);
   font-size: 5rem;
-  font-weight: 900;
+  line-height: 6rem;
+  font-weight: 600;
   text-transform: uppercase;
   text-align: center;
   background: linear-gradient(to bottom, #ff7002, #ff0846);
