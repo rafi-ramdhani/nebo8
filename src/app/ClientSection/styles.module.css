@@ -17,11 +17,10 @@
 
 .clientsContainer {
   width: 90rem;
-  max-width: 90%;
+  max-width: 70%;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 4rem;
   flex-wrap: wrap;
   position: relative;
   z-index: 10;
@@ -62,48 +61,8 @@
   }
 }
 
-.bi {
+.brandLogo {
   position: relative;
-  width: calc(1rem * 303 * 0.0625);
-  height: calc(1rem * 57 * 0.0625);
-}
-.mandiri {
-  position: relative;
-  width: calc(1rem * 241 * 0.0625);
-  height: calc(1rem * 144 * 0.0625);
-}
-.btpn {
-  position: relative;
-  width: calc(1rem * 159 * 0.0625);
-  height: calc(1rem * 108 * 0.0625);
-}
-.toyota {
-  position: relative;
-  width: calc(1rem * 115 * 0.0625);
-  height: calc(1rem * 95 * 0.0625);
-}
-.honda {
-  position: relative;
-  width: calc(1rem * 155 * 0.0625);
-  height: calc(1rem * 98 * 0.0625);
-}
-.puma {
-  position: relative;
-  width: calc(1rem * 175 * 0.0625);
-  height: calc(1rem * 89 * 0.0625);
-}
-.adidas {
-  position: relative;
-  width: calc(1rem * 148 * 0.0625);
-  height: calc(1rem * 148 * 0.0625);
-}
-.nb {
-  position: relative;
-  width: calc(1rem * 184 * 0.0625);
-  height: calc(1rem * 98 * 0.0625);
-}
-.logitech {
-  position: relative;
-  width: calc(1rem * 220 * 0.0625);
-  height: calc(1rem * 67 * 0.0625);
+  width: calc(1rem * 192.31 * 0.0625);
+  height: calc(1rem * 166.83 * 0.0625);
 }

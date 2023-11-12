@@ -3,15 +3,29 @@ import { ImageOptimized, PageSection } from "@/components";
 
 const ClientSection = () => {
   const clients = [
-    "bi",
+    "danamon",
+    "airasia",
+    "bluebird",
+    "bni",
+    "commonwealth",
+    "intiland",
+    "lmen",
+    "bpjs",
     "mandiri",
-    "btpn",
-    "toyota",
-    "honda",
+    "nutrisari",
+    "prenagen",
     "puma",
-    "adidas",
-    "nb",
-    "logitech",
+    "godrej",
+    "lavon",
+    "orangtua",
+    "hilo",
+    "tut",
+    "bakti",
+    "ef",
+    "btpn",
+    "sekar",
+    "telkomsel",
+    "tropicana",
   ];
 
   return (
@@ -21,7 +35,7 @@ const ClientSection = () => {
         <div className={styles.clientsContainer}>
           {clients.map((client) => {
             return (
-              <div key={client} className={styles[client]}>
+              <div key={client} className={styles.brandLogo}>
                 <ImageOptimized src={`/${client}.png`} alt={client} />
               </div>
             );
