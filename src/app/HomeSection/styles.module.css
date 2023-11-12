@@ -11,7 +11,7 @@
 }
 
 .journeyText {
-  max-width: calc(1rem * 600 * 0.0625);
+  max-width: calc(1rem * 900 * 0.0625);
   font-size: 5rem;
   font-weight: 900;
   text-transform: uppercase;

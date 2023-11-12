@@ -16,7 +16,7 @@ const ImageOptimized = ({
   src,
   alt,
   style,
-  quality = 75,
+  quality = 100,
   priority,
   className,
   onClick,

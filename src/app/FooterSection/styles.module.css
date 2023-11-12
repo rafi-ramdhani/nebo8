@@ -10,6 +10,7 @@
 
 .moon {
   position: absolute;
+  width: calc(1rem * 1358 * 0.0625);
+  height: calc(1rem * 445 * 0.0625);
   bottom: 0;
-  left: 0;
 }
