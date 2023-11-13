@@ -13,7 +13,7 @@
   position: absolute;
   left: 8rem;
   bottom: 8rem;
-  z-index: 5;
+  z-index: 10;
 }
 
 .when {
@@ -37,8 +37,7 @@
   height: calc(1rem * 148 * 0.0625);
   position: absolute;
   right: 0;
-  z-index: 5;
-  cursor: pointer;
+  z-index: 3;
   transition: all 0.2s ease-in;
 }
 .whatsapp:hover {
@@ -74,6 +73,7 @@
     width: calc(1rem * 420 * 0.0625 * 0.8);
     height: calc(1rem * 350 * 0.0625 * 0.8);
     left: 6rem;
+    cursor: pointer;
   }
   .whatsapp {
     width: calc(1rem * 148 * 0.0625 * 0.8);
@@ -103,6 +103,7 @@
     width: calc(1rem * 420 * 0.0625 * 0.8);
     height: calc(1rem * 350 * 0.0625 * 0.8);
     left: 6rem;
+    cursor: pointer;
   }
   .whatsapp {
     width: calc(1rem * 148 * 0.0625 * 0.8);
@@ -134,6 +135,7 @@
     height: calc(1rem * 350 * 0.0625 * 0.5);
     left: 6rem;
     bottom: 20rem;
+    cursor: pointer;
   }
   .whatsapp {
     width: calc(1rem * 148 * 0.0625 * 0.5);

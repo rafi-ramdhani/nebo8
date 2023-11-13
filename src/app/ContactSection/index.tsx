@@ -1,7 +1,7 @@
-import Image from "next/image";
+"use client";
 import styles from "./styles.module.css";
 import { ImageOptimized, PageSection } from "@/components";
-import { IMAGE_SIZES } from "@/constants/sizes";
+import Link from "next/link";
 
 const ContactSection = () => {
   return (
@@ -14,9 +14,13 @@ const ContactSection = () => {
           <div className={styles.brief}>
             <ImageOptimized src="/brief.png" alt="Brief Image" />
           </div>
-          <div className={styles.whatsapp}>
+          <Link
+            href="https://wa.me/+628111075757"
+            target="_blank"
+            className={styles.whatsapp}
+          >
             <ImageOptimized src="/whatsapp.png" alt="Whatsapp Image" />
-          </div>
+          </Link>
         </div>
         <div className={styles.astronaut}>
           <ImageOptimized src="/astronaut.png" alt="Astronaut Image" />

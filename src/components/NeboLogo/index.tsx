@@ -4,7 +4,7 @@ import { ImageOptimized } from "..";
 const NeboLogo = () => {
   return (
     <div className={styles.neboLogo}>
-      <ImageOptimized src="/nebo-logo.svg" alt="Nebo8 Logo" />
+      <ImageOptimized priority src="/nebo-logo.svg" alt="Nebo8 Logo" />
     </div>
   );
 };

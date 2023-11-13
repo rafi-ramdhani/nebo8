@@ -2,6 +2,8 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 1rem;
   position: relative;
   z-index: 1;
@@ -11,5 +13,5 @@
   width: calc(1rem * 522 * 0.0625);
   height: calc(1rem * 1068 * 0.0625);
   position: absolute;
-  /* left: -460px; */
+  left: 0;
 }

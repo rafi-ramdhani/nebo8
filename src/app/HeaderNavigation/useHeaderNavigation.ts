@@ -8,7 +8,7 @@ const useHeaderNavigation = () => {
   const [showNavigations, setShowNavigations] = useState(true);
   const [selectedNavigation, setSelectedNavigation] = useState<Navigation>("");
 
-  const { direction, resetScroll } = useScroll();
+  const { scrollY, direction, resetScroll } = useScroll();
 
   const navigations: Navigation[] = ["home", "service", "showreels", "contact"];
 
@@ -34,6 +34,7 @@ const useHeaderNavigation = () => {
   }, [isFirstRender, resetScroll]);
 
   return {
+    scrollY,
     navigations,
     showNavigations,
     selectedNavigation,

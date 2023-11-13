@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
   position: relative;
   z-index: 1;
 }
@@ -38,9 +38,73 @@
   font-weight: 500;
 }
 
+.contactContainer {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  margin-top: 3rem;
+}
+.contactDetailContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 15rem;
+  height: 7rem;
+}
+.mail {
+  position: relative;
+  width: calc(1rem * 49.78 * 0.0625);
+  height: calc(1rem * 35 * 0.0625);
+}
+.phone {
+  position: relative;
+  width: calc(1rem * 38.86 * 0.0625);
+  height: calc(1rem * 39 * 0.0625);
+}
+.contactText {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  text-align: center;
+  color: white;
+  font-weight: 500;
+}
+
+.locationContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+.location {
+  position: relative;
+  width: calc(1rem * 15.54 * 0.0625);
+  height: calc(1rem * 25 * 0.0625);
+}
+.navigateText {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-align: center;
+  color: white;
+  font-weight: 600;
+}
+.locationLink {
+  position: relative;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-align: center;
+  color: white;
+  font-weight: 300;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 100;
+}
+
 .moon {
   position: absolute;
   width: calc(1rem * 1358 * 0.0625);
   height: calc(1rem * 445 * 0.0625);
   bottom: 0;
+  left: calc(50% - (calc(1rem * 1358 * 0.0625 * 0.5)) - 2rem);
 }

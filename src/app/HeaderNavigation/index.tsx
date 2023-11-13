@@ -29,7 +29,11 @@ const HeaderNavigation = () => {
   };
 
   return (
-    <header className={styles.headerNavigation}>
+    <header
+      className={`${styles.headerNavigation} ${
+        scrollY > 100 ? styles.darkBackground : ""
+      }`}
+    >
       <div>
         <NeboLogo />
 

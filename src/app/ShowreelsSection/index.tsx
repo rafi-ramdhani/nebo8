@@ -1,7 +1,7 @@
 "use client";
 
 import styles from "./styles.module.css";
-import { ImageOptimized, PageSection } from "@/components";
+import { ImageOptimized, PageSection, YoutubeVideo } from "@/components";
 import { useRef } from "react";
 import useMoonTranslate from "./useMoonTranslate";
 
@@ -16,6 +16,7 @@ const ShowreelsSection = () => {
   return (
     <PageSection ref={sectionRef} section="showreels">
       <div className={styles.showreelsContent}>
+        <YoutubeVideo videoId="5tM5YW1OYqE" />
         <div className={styles.moon}>
           <ImageOptimized
             src="/moon.png"
