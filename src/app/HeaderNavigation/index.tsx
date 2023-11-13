@@ -8,6 +8,7 @@ import { ImageOptimized } from "@/components";
 
 const HeaderNavigation = () => {
   const {
+    scrollY,
     navigations,
     showNavigations,
     selectedNavigation,
