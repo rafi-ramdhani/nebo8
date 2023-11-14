@@ -7,26 +7,32 @@ const ContactSection = () => {
   return (
     <PageSection section="contact">
       <div className={styles.contactContent}>
-        <div className={styles.when}>
-          <ImageOptimized src="/when.png" alt="When Image" />
-        </div>
-        <div className={styles.whatsappContainer}>
-          <div className={styles.brief}>
-            <ImageOptimized src="/brief.png" alt="Brief Image" />
+        <div className={styles.innerContactContent}>
+          <div className={styles.when}>
+            <ImageOptimized src="/when.png" alt="When Image" />
           </div>
+
           <Link
             href="https://wa.me/+628111075757"
             target="_blank"
-            className={styles.whatsapp}
+            className={styles.whatsappContainer}
           >
-            <ImageOptimized src="/whatsapp.png" alt="Whatsapp Image" />
+            <div className={styles.brief}>
+              <ImageOptimized src="/brief.png" alt="Brief Image" />
+            </div>
+
+            <div className={styles.whatsapp}>
+              <ImageOptimized src="/whatsapp.png" alt="Whatsapp Image" />
+            </div>
           </Link>
-        </div>
-        <div className={styles.astronaut}>
-          <ImageOptimized src="/astronaut.png" alt="Astronaut Image" />
-        </div>
-        <div className={styles.rocket}>
-          <ImageOptimized src="/rocket.png" alt="Rocket Image" />
+
+          <div className={styles.astronaut}>
+            <ImageOptimized src="/astronaut.png" alt="Astronaut Image" />
+          </div>
+
+          <div className={styles.rocket}>
+            <ImageOptimized src="/rocket.png" alt="Rocket Image" />
+          </div>
         </div>
       </div>
     </PageSection>
