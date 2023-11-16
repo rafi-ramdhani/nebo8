@@ -3,8 +3,9 @@
   display: flex;
   justify-content: center;
   position: absolute;
-  bottom: 5rem;
-  z-index: 10;
+  bottom: 13rem;
+  padding-top: 5rem;
+  z-index: 5;
   height: calc(1rem * 437 * 0.0625);
 }
 

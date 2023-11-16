@@ -2,6 +2,7 @@
   width: calc(1rem * 38 * 0.0625);
   height: calc(1rem * 53 * 0.0625);
   position: relative;
+  z-index: 100;
   cursor: pointer;
   transition: all 100ms ease-in;
 }
