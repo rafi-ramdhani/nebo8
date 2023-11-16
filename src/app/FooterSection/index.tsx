@@ -15,34 +15,38 @@ const FooterSection = () => {
         </div>
 
         <div className={styles.contactContainer}>
-          <div className={styles.contactDetailContainer}>
+          <Link
+            href="mailto:marketing@nebo8.com"
+            className={styles.contactDetailContainer}
+          >
             <div className={styles.mail}>
               <ImageOptimized src="/mail-icon.svg" alt="Mail Icon" />
             </div>
-            <h4 className={styles.contactText}>Marketing@nebo.com</h4>
-          </div>
+            <h4 className={styles.contactText}>marketing@nebo8.com</h4>
+          </Link>
 
-          <div className={styles.contactDetailContainer}>
+          <Link
+            href="https://wa.me/+628111075757/?text=Halo,%20Saya%20mau%20tahu%20tentang%20Nebo8"
+            target="_blank"
+            className={styles.contactDetailContainer}
+          >
             <div className={styles.phone}>
               <ImageOptimized src="/phone-icon.svg" alt="Mail Icon" />
             </div>
-            <h4 className={styles.contactText}>08111075757</h4>
-          </div>
+            <h4 className={styles.contactText}>+62 811-1075-757</h4>
+          </Link>
         </div>
 
-        <div className={styles.locationContainer}>
+        <Link
+          href="https://maps.app.goo.gl/n9imiMqyuoT51xF9A"
+          target="_blank"
+          className={styles.locationContainer}
+        >
           <div className={styles.location}>
             <ImageOptimized src="/location-icon.svg" alt="Location Icon" />
           </div>
           <h4 className={styles.navigateText}>Navigate To Us</h4>
-          <Link
-            href="https://maps.app.goo.gl/R8uMU1syQKsrd1VQ6?g_st=ic"
-            target="_blank"
-            className={styles.locationLink}
-          >
-            (Click Here)
-          </Link>
-        </div>
+        </Link>
 
         <div className={styles.moon}>
           <ImageOptimized src="/moon2.png" alt="Moon" />

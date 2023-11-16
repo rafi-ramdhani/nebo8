@@ -49,8 +49,16 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  width: 15rem;
+  width: 20rem;
   height: 7rem;
+  transition: all 200ms ease-in;
+  text-decoration: none;
+}
+.contactDetailContainer:hover {
+  scale: 1.05;
+}
+.contactDetailContainer:active {
+  scale: 1;
 }
 .mail {
   position: relative;
@@ -76,6 +84,14 @@
   align-items: center;
   gap: 0.5rem;
   margin-top: 2rem;
+  transition: all 200ms ease-in;
+  text-decoration: none;
+}
+.locationContainer:hover {
+  scale: 1.05;
+}
+.locationContainer:active {
+  scale: 1;
 }
 .location {
   position: relative;
@@ -88,6 +104,7 @@
   text-align: center;
   color: white;
   font-weight: 600;
+  text-decoration: none;
 }
 .locationLink {
   position: relative;

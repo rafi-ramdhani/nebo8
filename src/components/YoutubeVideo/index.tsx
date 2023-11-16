@@ -6,9 +6,15 @@ import YouTube, { YouTubeProps } from "react-youtube";
 
 type YoutubeVideoProps = {
   videoId?: string;
+  width?: number;
+  height?: number;
 };
 
-const YoutubeVideo = ({ videoId = "2g811Eo7K8U" }: YoutubeVideoProps) => {
+const YoutubeVideo = ({
+  videoId = "2g811Eo7K8U",
+  width: widthProp,
+  height: heightProp,
+}: YoutubeVideoProps) => {
   const { device } = useDimensions();
 
   const isDeviceTBD = device === "TBD";
@@ -41,8 +47,8 @@ const YoutubeVideo = ({ videoId = "2g811Eo7K8U" }: YoutubeVideoProps) => {
   const { width, height } = sizeDecider();
 
   const opts: YouTubeProps["opts"] = {
-    height,
-    width,
+    height: heightProp || height,
+    width: widthProp || width,
   };
 
   if (isDeviceTBD) return null;
