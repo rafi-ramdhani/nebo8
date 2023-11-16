@@ -13,7 +13,8 @@ const ContactSection = () => {
           </div>
 
           <Link
-            href="https://wa.me/+628111075757"
+            // href="https://wa.me/+628111075757/?text=Halo,%20Saya%20mau%20tahu%20tentang%20Nebo8"
+            href="https://wa.me/+628111076600/?text=Halo,%20Saya%20mau%20tahu%20tentang%20Nebo8"
             target="_blank"
             className={styles.whatsappContainer}
           >

@@ -5,6 +5,7 @@ import ShowreelsSection from "./ShowreelsSection";
 import ContactSection from "./ContactSection";
 import ClientSection from "./ClientSection";
 import FooterSection from "./FooterSection";
+import LiveChat from "./LiveChat";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <ContactSection />
       <ClientSection />
       <FooterSection />
+      <LiveChat />
     </main>
   );
 }

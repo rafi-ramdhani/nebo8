@@ -3,6 +3,8 @@
   height: fit-content;
   border-radius: 2rem;
   overflow: hidden;
+  position: relative;
+  z-index: 200;
 }
 
 .youtubeVideo {
