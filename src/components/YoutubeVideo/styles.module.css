@@ -6,6 +6,16 @@
   position: relative;
   z-index: 200;
 }
+.youtubeContainerShowreels {
+  width: fit-content;
+  height: fit-content;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  overflow: hidden;
+  position: relative;
+  z-index: 200;
+  right: -0rem;
+}
 
 .youtubeVideo {
   width: 100%;

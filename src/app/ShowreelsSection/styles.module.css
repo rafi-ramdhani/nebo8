@@ -2,11 +2,17 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   gap: 1rem;
   position: relative;
   z-index: 1;
+}
+
+@media only screen and (max-width: 728px) {
+  .showreelsContent {
+    align-items: center;
+  }
 }
 
 .moon {

@@ -16,7 +16,7 @@ const ShowreelsSection = () => {
   return (
     <PageSection ref={sectionRef} section="showreels">
       <div className={styles.showreelsContent}>
-        <YoutubeVideo videoId="5tM5YW1OYqE" />
+        <YoutubeVideo isForShowreels videoId="5tM5YW1OYqE" />
         <div className={styles.moon}>
           <ImageOptimized
             src="/moon.png"

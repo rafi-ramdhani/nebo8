@@ -6,14 +6,12 @@ import YouTube, { YouTubeProps } from "react-youtube";
 
 type YoutubeVideoProps = {
   videoId?: string;
-  width?: number;
-  height?: number;
+  isForShowreels?: boolean;
 };
 
 const YoutubeVideo = ({
   videoId = "2g811Eo7K8U",
-  width: widthProp,
-  height: heightProp,
+  isForShowreels = false,
 }: YoutubeVideoProps) => {
   const { device } = useDimensions();
 
@@ -25,10 +23,14 @@ const YoutubeVideo = ({
 
     switch (device) {
       case "laptop":
+        width = isForShowreels ? 828 * 1.8 : 828;
+        height = isForShowreels ? 514 * 1.8 : 514;
         width = width * 0.75;
         height = height * 0.75;
         break;
       case "tablet":
+        width = isForShowreels ? 828 * 1.8 : 828;
+        height = isForShowreels ? 514 * 1.8 : 514;
         width = width * 0.75 * 0.75;
         height = height * 0.75 * 0.75;
         break;
@@ -37,6 +39,8 @@ const YoutubeVideo = ({
         height = height * 0.75 * 0.75 * 0.75;
         break;
       case "desktop":
+        width = isForShowreels ? 828 * 1.8 : 828;
+        height = isForShowreels ? 514 * 1.8 : 514;
       default:
         break;
     }
@@ -46,15 +50,33 @@ const YoutubeVideo = ({
 
   const { width, height } = sizeDecider();
 
+  const containerClassNameDecider = () => {
+    if (isForShowreels) {
+      switch (device) {
+        case "laptop":
+        case "tablet":
+        case "desktop":
+          return styles.youtubeContainerShowreels;
+
+        default:
+          return styles.youtubeContainer;
+      }
+    }
+
+    return styles.youtubeContainer;
+  };
+
+  const containerClassName = containerClassNameDecider();
+
   const opts: YouTubeProps["opts"] = {
-    height: heightProp || height,
-    width: widthProp || width,
+    height,
+    width,
   };
 
   if (isDeviceTBD) return null;
 
   return (
-    <div className={styles.youtubeContainer}>
+    <div className={containerClassName}>
       <YouTube opts={opts} videoId={videoId} className={styles.youtubeVideo} />
     </div>
   );

@@ -1,0 +1,74 @@
+.liveChat {
+  width: calc(1rem * 117.84 * 0.0625 + 1rem);
+  height: calc(1rem * 117.84 * 0.0625);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: -1rem;
+  bottom: 3rem;
+  z-index: 5000;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.1);
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  padding-right: 1rem;
+  transition: all 100ms ease-in;
+}
+.liveChat:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.liveChatInvisible {
+  right: -20rem;
+}
+
+.liveChatIcon {
+  position: relative;
+  width: calc(1rem * 60.66 * 0.0625);
+  height: calc(1rem * 58.18 * 0.0625);
+}
+
+.chatbox {
+  position: fixed;
+  width: calc(1rem * 480.33 * 0.0625);
+  height: calc(1rem * 497.98 * 0.0625);
+  background: white;
+  z-index: 10000;
+  right: calc(-1rem * 480.33 * 0.0625);
+  bottom: 2rem;
+  border-radius: 1rem;
+  transition: all 100ms ease-in;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.1) 20%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+.chatboxVisible {
+  right: 2rem;
+}
+.chatTitleText {
+  color: white;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.chatButton {
+  outline: none;
+  border: none;
+  width: fit-content;
+  color: white;
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: 700;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.3rem;
+  background: linear-gradient(90deg, #98d9e6 0%, #322d97 100%);
+  cursor: pointer;
+}

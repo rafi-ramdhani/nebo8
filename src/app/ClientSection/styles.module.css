@@ -26,10 +26,17 @@
   z-index: 10;
 }
 
+.biLogo {
+  position: relative;
+  width: calc(1rem * 236.84 * 0.0625);
+  height: calc(1rem * 75 * 0.0625);
+  filter: drop-shadow(5px 5px 10px #000000);
+}
 .brandLogo {
   position: relative;
   width: calc(1rem * 192.31 * 0.0625);
   height: calc(1rem * 166.83 * 0.0625);
+  filter: drop-shadow(5px 5px 2px #000000);
 }
 .astronaut {
   width: calc(1rem * 490 * 0.0625);

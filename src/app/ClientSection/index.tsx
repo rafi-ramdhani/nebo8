@@ -3,6 +3,7 @@ import { ImageOptimized, PageSection } from "@/components";
 
 const ClientSection = () => {
   const clients = [
+    "bi",
     "danamon",
     "airasia",
     "bluebird",
@@ -34,8 +35,11 @@ const ClientSection = () => {
         <h2 className={styles.ourClientText}>our client</h2>
         <div className={styles.clientsContainer}>
           {clients.map((client) => {
+            const isBI = client === "bi";
+            const className = isBI ? styles.biLogo : styles.brandLogo;
+
             return (
-              <div key={client} className={styles.brandLogo}>
+              <div key={client} className={className}>
                 <ImageOptimized src={`/${client}.png`} alt={client} />
               </div>
             );
