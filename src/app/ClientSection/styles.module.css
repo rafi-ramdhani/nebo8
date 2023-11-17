@@ -52,7 +52,7 @@
   bottom: -26rem;
   right: -26rem;
 }
-@media only screen and (max-width: var(--phone-threshold)) {
+@media only screen and (max-width: 800px) {
   .brandLogo {
     width: calc(1rem * 192.31 * 0.0625 * 0.75);
     height: calc(1rem * 166.83 * 0.0625 * 0.75);
@@ -64,7 +64,7 @@
     right: -26rem;
   }
 }
-@media only screen and (max-width: var(--small-phone-threshold)) {
+@media only screen and (max-width: 450px) {
   .brandLogo {
     width: calc(1rem * 192.31 * 0.0625 * 0.75);
     height: calc(1rem * 166.83 * 0.0625 * 0.75);
