@@ -1,5 +1,9 @@
 :root {
   --nav-bg: rgba(255, 255, 255, 0.5);
+  --small-phone-threshold: 450px;
+  --phone-threshold: 800px;
+  --tablet-threshold: 1400px;
+  --laptop-threshold: 1920px;
 }
 
 * {
@@ -25,12 +29,12 @@ body {
     font-size: 6.75px;
   }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 800px) {
   html {
     font-size: 9px;
   }
 }
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1400px) {
   html {
     font-size: 12px;
   }

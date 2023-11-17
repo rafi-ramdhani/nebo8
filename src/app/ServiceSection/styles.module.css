@@ -187,28 +187,6 @@
   animation-name: sevenRight;
 }
 
-/* .serviceTextOneFloat { */
-/*   animation-name: floating; */
-/*   animation-duration: 5s; */
-/*   animation-iteration-count: infinite; */
-/*   animation-fill-mode: backwards; */
-/*   animation-delay: 1s; */
-/* } */
-
-@keyframes floating {
-  0% {
-    translate: -40rem -30.5rem;
-  }
-
-  50% {
-    translate: -40rem -29rem;
-  }
-
-  100% {
-    translate: -40rem -30.5rem;
-  }
-}
-
 @keyframes oneRight {
   0% {
     top: -32rem;

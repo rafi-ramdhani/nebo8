@@ -16,9 +16,9 @@ const useDimensions = () => {
 
     if (!canBeDetermined) return "TBD";
 
-    const isPhone = width < 768;
-    const isTablet = width >= 768 && width < 1280;
-    const isLaptop = width >= 1280 && width < 1920;
+    const isPhone = width < 800;
+    const isTablet = width >= 800 && width < 1400;
+    const isLaptop = width >= 1400 && width < 1920;
     const isDesktop = width >= 1920;
 
     if (isPhone) return "phone";
