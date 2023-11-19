@@ -1,7 +1,8 @@
-export const FIRST_SERVICE_NAME = "";
+export const FIRST_SERVICE_NAME = "Event Multimedia";
 export const FIRST_VIDEO_ID = "6y8d1oUClQE";
-export const FIRST_DESCRIPTION_IMG = "";
-export const FIRST_DESCRIPTION = "";
+export const FIRST_DESCRIPTION_IMG = "/event-multimedia.png";
+export const FIRST_DESCRIPTION =
+  "Video for a multimedia event involves careful planning and consideration inline with event's theme (KV), goals, and audience include bumper video, animation, transition, etc.";
 
 export const SECOND_SERVICE_NAME = "2D & 3D Animation";
 export const SECOND_VIDEO_ID = "6y8d1oUClQE";
@@ -39,7 +40,7 @@ export const SEVENTH_DESCRIPTION_IMG = "/photography-description.png";
 export const SEVENTH_DESCRIPTION =
   "Visual image is the strongest medium to deliver message and touch people’s heart at once than words. We believe a picture tells a story that you could not tell. Branding Photography & Digital Imaging";
 
-export type FirstServiceName = "";
+export type FirstServiceName = "Event Multimedia";
 export type FirstVideoId = "6y8d1oUClQE";
 export type SecondServiceName = "2D & 3D Animation";
 export type SecondVideoId = "6y8d1oUClQE";

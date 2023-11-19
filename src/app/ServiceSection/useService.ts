@@ -253,16 +253,16 @@ const useService = () => {
   );
 
   // To skip service selection (if the service is empty)
-  useEffect(() => {
-    if (skipServiceSelectionDirection && isReadyToSelect) {
-      const skipTimeout = setTimeout(() => {
-        handleSelect(skipServiceSelectionDirection);
-        setSkipServiceSelectionDirection("");
-      }, 100);
-
-      return () => clearTimeout(skipTimeout);
-    }
-  }, [isReadyToSelect, skipServiceSelectionDirection, handleSelect]);
+  // useEffect(() => {
+  //   if (skipServiceSelectionDirection && isReadyToSelect) {
+  //     const skipTimeout = setTimeout(() => {
+  //       handleSelect(skipServiceSelectionDirection);
+  //       setSkipServiceSelectionDirection("");
+  //     }, 100);
+  //
+  //     return () => clearTimeout(skipTimeout);
+  //   }
+  // }, [isReadyToSelect, skipServiceSelectionDirection, handleSelect]);
 
   // To prevent rapid service selection
   useEffect(() => {

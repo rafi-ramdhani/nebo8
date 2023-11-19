@@ -9,6 +9,7 @@ type ImageOptimizedProps = {
   quality?: number;
   priority?: boolean;
   className?: string;
+  unoptimized?: boolean;
   onClick?: () => void;
 };
 
@@ -19,6 +20,7 @@ const ImageOptimized = ({
   quality = 100,
   priority,
   className,
+  unoptimized,
   onClick,
 }: ImageOptimizedProps) => {
   return (
@@ -31,6 +33,7 @@ const ImageOptimized = ({
       sizes={IMAGE_SIZES}
       priority={priority}
       className={className}
+      unoptimized={unoptimized}
       onClick={onClick}
     />
   );

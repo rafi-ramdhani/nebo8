@@ -20,7 +20,11 @@ const ShowreelsSection = () => {
   });
 
   return (
-    <PageSection ref={sectionRef} section="showreels">
+    <PageSection
+      ref={sectionRef}
+      section="showreels"
+      style={{ marginTop: "-5rem" }}
+    >
       <div className={styles.showreelsContent}>
         <YoutubeVideo isForShowreels videoId="5tM5YW1OYqE" />
 

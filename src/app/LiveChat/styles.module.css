@@ -41,7 +41,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: #002a8ce6;
+  background: #002a8ccc;
 }
 .chatboxVisible {
   right: 2rem;
@@ -65,6 +65,22 @@
   border-radius: 0.3rem;
   background: linear-gradient(90deg, #98d9e6 0%, #322d97 100%);
   cursor: pointer;
+}
+.minimizeButtonContainer {
+  width: calc(1rem * 26 * 0.0625 * 2.5);
+  height: calc(1rem * 26 * 0.0625 * 2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+.minimizeButton {
+  position: relative;
+  width: calc(1rem * 26 * 0.0625);
+  height: calc(1rem * 6 * 0.0625);
 }
 
 .userForm {

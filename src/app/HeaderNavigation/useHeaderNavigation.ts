@@ -1,7 +1,13 @@
 import { useScroll } from "@/hooks";
 import { useEffect, useState } from "react";
 
-export type Navigation = "home" | "service" | "showreels" | "contact" | "";
+export type Navigation =
+  | "home"
+  | "service"
+  | "showreels"
+  | "contact"
+  | "client"
+  | "";
 
 const useHeaderNavigation = () => {
   const [isFirstRender, setIsFirstRender] = useState(true);
@@ -10,7 +16,13 @@ const useHeaderNavigation = () => {
 
   const { scrollY, direction, resetScroll } = useScroll();
 
-  const navigations: Navigation[] = ["home", "service", "showreels", "contact"];
+  const navigations: Navigation[] = [
+    "home",
+    "service",
+    "showreels",
+    "contact",
+    "client",
+  ];
 
   const handleShowNavigationToggle = () => {
     setShowNavigations((prev) => !prev);

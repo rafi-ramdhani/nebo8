@@ -30,6 +30,7 @@
 }
 
 .headerNavigation nav {
+  width: 42rem;
   height: 3.5rem;
   display: flex;
   align-items: center;
@@ -43,6 +44,7 @@
 
 .headerNavigation nav ul {
   height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   gap: 2rem;
@@ -50,8 +52,8 @@
 }
 
 .navButtonContainer {
-  width: calc(1rem * 51 * 0.0625);
-  height: calc(1rem * 51 * 0.0625);
+  min-width: calc(1rem * 51 * 0.0625);
+  min-height: calc(1rem * 51 * 0.0625);
   display: flex;
   align-items: center;
   justify-content: center;

@@ -46,8 +46,15 @@ const LiveChat = () => {
         </div>
       </div>
 
-      <div className={chatboxClassName} onClick={closeChatbox}>
+      <div className={chatboxClassName}>
+        <div className={styles.minimizeButtonContainer} onClick={closeChatbox}>
+          <div className={styles.minimizeButton}>
+            <ImageOptimized src="/minimize-icon.svg" alt="Minimize Button" />
+          </div>
+        </div>
+
         <h4 className={styles.chatTitleText}>please tell us your brief</h4>
+
         <form className={styles.userForm}>
           <div className={styles.userFields}>
             <div
@@ -64,6 +71,7 @@ const LiveChat = () => {
                 className={styles.fieldInput}
               ></input>
             </div>
+
             <div
               className={styles.userField}
               onClick={(e) => e.stopPropagation()}

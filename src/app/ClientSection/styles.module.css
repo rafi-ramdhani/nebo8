@@ -26,6 +26,13 @@
   z-index: 10;
 }
 
+.moreText {
+  margin-top: 2rem;
+  color: white;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
 .biLogo {
   position: relative;
   width: calc(1rem * 236.84 * 0.0625);
@@ -43,14 +50,15 @@
   height: calc(1rem * 1104 * 0.0625);
   position: absolute;
   bottom: -40rem;
-  left: -2rem;
+  left: -12rem;
 }
 .spaceship {
   width: calc(1rem * 1191 * 0.0625);
   height: calc(1rem * 794 * 0.0625);
   position: absolute;
   bottom: -26rem;
-  right: -26rem;
+  right: -46rem;
+  z-index: 100;
 }
 @media only screen and (max-width: 800px) {
   .brandLogo {
@@ -61,23 +69,24 @@
     bottom: -40rem;
   }
   .spaceship {
-    right: -26rem;
+    right: -46rem;
   }
 }
 @media only screen and (max-width: 450px) {
   .brandLogo {
-    width: calc(1rem * 192.31 * 0.0625 * 0.75);
-    height: calc(1rem * 166.83 * 0.0625 * 0.75);
+    width: calc(1rem * 192.31 * 0.0625 * 0.75 * 0.75);
+    height: calc(1rem * 166.83 * 0.0625 * 0.75 * 0.75);
   }
   .astronaut {
     width: calc(1rem * 490 * 0.0625 * 0.5);
     height: calc(1rem * 1104 * 0.0625 * 0.5);
     bottom: -20rem;
+    left: -6rem;
   }
   .spaceship {
     width: calc(1rem * 1191 * 0.0625 * 0.5);
     height: calc(1rem * 794 * 0.0625 * 0.5);
-    right: -6rem;
+    right: -16rem;
     bottom: -16rem;
   }
 }

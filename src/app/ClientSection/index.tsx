@@ -30,7 +30,7 @@ const ClientSection = () => {
   ];
 
   return (
-    <PageSection section="client">
+    <PageSection section="client" style={{ marginTop: "-5rem" }}>
       <div className={styles.clientContent}>
         <h2 className={styles.ourClientText}>our client</h2>
         <div className={styles.clientsContainer}>
@@ -45,6 +45,8 @@ const ClientSection = () => {
             );
           })}
         </div>
+
+        <h4 className={styles.moreText}>And many more</h4>
 
         <div className={styles.astronaut}>
           <ImageOptimized src="/astronaut2.png" alt="Astronaut Image" />

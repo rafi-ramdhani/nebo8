@@ -5,6 +5,7 @@ import NeboLogo from "@/components/NeboLogo";
 import useHeaderNavigation from "./useHeaderNavigation";
 import NavigationItem from "./NavigationItem";
 import { ImageOptimized } from "@/components";
+import Link from "next/link";
 
 const HeaderNavigation = () => {
   const {
@@ -36,7 +37,9 @@ const HeaderNavigation = () => {
       }`}
     >
       <div>
-        <NeboLogo />
+        <Link href="#home">
+          <NeboLogo type="header" />
+        </Link>
 
         <nav style={navStyle}>
           <ul>

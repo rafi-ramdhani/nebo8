@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const ContactSection = () => {
   return (
-    <PageSection section="contact">
+    <PageSection section="contact" style={{ marginTop: "-5rem" }}>
       <div className={styles.contactContent}>
         <div className={styles.innerContactContent}>
           <div className={styles.when}>
