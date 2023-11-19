@@ -9,8 +9,7 @@ const BackgroundImage = ({ type }: BackgroundImageProps) => {
   return (
     <ImageOptimized
       priority
-      unoptimized
-      // unoptimized={type === "home"}
+      unoptimized={type === "home"}
       src={`/${type}-background.png`}
       alt="Background Image"
       className={styles.backgroundImage}
