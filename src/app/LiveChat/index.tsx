@@ -48,9 +48,41 @@ const LiveChat = () => {
 
       <div className={chatboxClassName} onClick={closeChatbox}>
         <h4 className={styles.chatTitleText}>please tell us your brief</h4>
-        <button className={styles.chatButton} onClick={startChat}>
-          Start The Chat
-        </button>
+        <form className={styles.userForm}>
+          <div className={styles.userFields}>
+            <div
+              className={styles.userField}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <label htmlFor="user_name" className={styles.fieldLabel}>
+                Name :
+              </label>
+              <input
+                id="user_name"
+                type="text"
+                placeholder="John Doe"
+                className={styles.fieldInput}
+              ></input>
+            </div>
+            <div
+              className={styles.userField}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <label htmlFor="user_mail" className={styles.fieldLabel}>
+                Email :
+              </label>
+              <input
+                id="user_mail"
+                type="text"
+                placeholder="Johndoe@gmail.com"
+                className={styles.fieldInput}
+              ></input>
+            </div>
+          </div>
+          <button className={styles.chatButton} onClick={startChat}>
+            Start The Chat
+          </button>
+        </form>
       </div>
     </Fragment>
   );

@@ -9,14 +9,14 @@
   bottom: 3rem;
   z-index: 5000;
   cursor: pointer;
-  background: rgba(255, 255, 255, 0.1);
+  background: #002a8c80;
   border-top-left-radius: 2rem;
   border-bottom-left-radius: 2rem;
   padding-right: 1rem;
   transition: all 100ms ease-in;
 }
 .liveChat:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: #002a8c99;
 }
 .liveChatInvisible {
   right: -20rem;
@@ -32,7 +32,6 @@
   position: fixed;
   width: calc(1rem * 480.33 * 0.0625);
   height: calc(1rem * 497.98 * 0.0625);
-  background: white;
   z-index: 10000;
   right: calc(-1rem * 480.33 * 0.0625);
   bottom: 2rem;
@@ -42,12 +41,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0.2) 0%,
-    rgba(255, 255, 255, 0.1) 20%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: #002a8ce6;
 }
 .chatboxVisible {
   right: 2rem;
@@ -71,4 +65,46 @@
   border-radius: 0.3rem;
   background: linear-gradient(90deg, #98d9e6 0%, #322d97 100%);
   cursor: pointer;
+}
+
+.userForm {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.userFields {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.userField {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.fieldLabel {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.fieldInput {
+  background: rgba(255, 255, 255, 0.1);
+  height: 3rem;
+  border: none;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  color: white;
+}
+.fieldInput::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.2rem;
 }

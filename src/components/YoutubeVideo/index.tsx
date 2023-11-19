@@ -18,19 +18,28 @@ const YoutubeVideo = ({
   const isDeviceTBD = device === "TBD";
 
   const sizeDecider = () => {
-    let width = 828;
-    let height = 514;
+    const SHOWREELS_WIDTH = 1220;
+    const SHOWREELS_HEIGHT = 686.25;
+    const REGULAR_WIDTH = 828;
+    const REGULAR_HEIGHT = 514;
+
+    let width = REGULAR_WIDTH;
+    let height = REGULAR_HEIGHT;
 
     switch (device) {
       case "laptop":
-        width = isForShowreels ? 828 * 1.9 : 828;
-        height = isForShowreels ? 514 * 1.9 : 514;
+        if (isForShowreels) {
+          width = SHOWREELS_WIDTH;
+          height = SHOWREELS_HEIGHT;
+        }
         width = width * 0.75;
         height = height * 0.75;
         break;
       case "tablet":
-        width = isForShowreels ? 828 * 1.9 : 828;
-        height = isForShowreels ? 514 * 1.9 : 514;
+        if (isForShowreels) {
+          width = SHOWREELS_WIDTH;
+          height = SHOWREELS_HEIGHT;
+        }
         width = width * 0.75 * 0.75;
         height = height * 0.75 * 0.75;
         break;
@@ -39,8 +48,11 @@ const YoutubeVideo = ({
         height = height * 0.75 * 0.75 * 0.75;
         break;
       case "desktop":
-        width = isForShowreels ? 828 * 1.9 : 828;
-        height = isForShowreels ? 514 * 1.9 : 514;
+        if (isForShowreels) {
+          width = SHOWREELS_WIDTH;
+          height = SHOWREELS_HEIGHT;
+        }
+        break;
       default:
         break;
     }

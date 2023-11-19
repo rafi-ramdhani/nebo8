@@ -3,8 +3,10 @@ import { useEffect, useState } from "react";
 
 const useMoonTranslate = ({
   sectionOffsetTop,
+  from = "left",
 }: {
   sectionOffsetTop: number;
+  from: "left" | "right";
 }) => {
   const [moonTranslateX, setMoonTranslateX] = useState(-1);
 
@@ -22,7 +24,9 @@ const useMoonTranslate = ({
     setMoonTranslateX(translateX >= 0 ? 0 : translateX);
   }, [moonTranslateX, translateX, sectionOffsetTop]);
 
-  const moonTranslate = `${moonTranslateX}px 0px`;
+  const moonTranslate = `${
+    from === "left" ? moonTranslateX : moonTranslateX * -1
+  }px 0px`;
 
   return moonTranslate;
 };
