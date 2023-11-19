@@ -18,7 +18,7 @@ const ServiceSection = () => {
 
         <OrangeLine />
 
-        <NeboLogo />
+        <NeboLogo style={{ visibility: "hidden" }} />
 
         <div className={styles.selection}>
           <SelectionArrowButton
