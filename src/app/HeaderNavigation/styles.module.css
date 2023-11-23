@@ -75,3 +75,18 @@
   height: calc(1rem * 40 * 0.0625);
   position: relative;
 }
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.logoText {
+  font-size: 1.5rem;
+  max-width: 5rem;
+  text-align: center;
+  font-weight: 700;
+  color: white;
+  margin-left: -1rem;
+  text-transform: uppercase;
+}

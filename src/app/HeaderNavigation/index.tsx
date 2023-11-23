@@ -37,8 +37,9 @@ const HeaderNavigation = () => {
       }`}
     >
       <div>
-        <Link href="#home">
+        <Link href="#home" className={styles.logoContainer}>
           <NeboLogo type="header" />
+          <h3 className={styles.logoText}>Creative Agency</h3>
         </Link>
 
         <nav style={navStyle}>

@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
   position: relative;
   z-index: 1;
 }
@@ -40,6 +40,7 @@
 
 .contactContainer {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 5rem;
   margin-top: 2rem;
@@ -95,8 +96,8 @@
 }
 .location {
   position: relative;
-  width: calc(1rem * 15.54 * 0.0625);
-  height: calc(1rem * 25 * 0.0625);
+  width: calc(1rem * 26 * 0.0625);
+  height: calc(1rem * 41.48 * 0.0625);
 }
 .navigateText {
   font-size: 1.5rem;
@@ -116,6 +117,12 @@
   text-decoration: none;
   cursor: pointer;
   z-index: 100;
+}
+
+.building {
+  position: relative;
+  width: calc(1rem * 41.5 * 0.0625);
+  height: calc(1rem * 46.9 * 0.0625);
 }
 
 .moon {

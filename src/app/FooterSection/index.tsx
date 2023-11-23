@@ -35,18 +35,31 @@ const FooterSection = () => {
             </div>
             <h4 className={styles.contactText}>+62 811-1075-757</h4>
           </Link>
-        </div>
 
-        <Link
-          href="https://maps.app.goo.gl/n9imiMqyuoT51xF9A"
-          target="_blank"
-          className={styles.locationContainer}
-        >
-          <div className={styles.location}>
-            <ImageOptimized src="/location-icon.svg" alt="Location Icon" />
-          </div>
-          <h4 className={styles.navigateText}>Navigate To Us</h4>
-        </Link>
+          <Link
+            href="https://drive.google.com/drive/folders/1e4-gH9rBSQzsmSajRbhwx2O-Ut15Yrzv?usp=drive_link"
+            target="_blank"
+            // href="/test-download.xlsx"
+            // download
+            className={styles.contactDetailContainer}
+          >
+            <div className={styles.building}>
+              <ImageOptimized src="/building-icon.svg" alt="Location Icon" />
+            </div>
+            <h4 className={styles.contactText}>Company Profile</h4>
+          </Link>
+
+          <Link
+            href="https://maps.app.goo.gl/n9imiMqyuoT51xF9A"
+            target="_blank"
+            className={styles.contactDetailContainer}
+          >
+            <div className={styles.location}>
+              <ImageOptimized src="/location-icon.svg" alt="Location Icon" />
+            </div>
+            <h4 className={styles.contactText}>Navigate To Us</h4>
+          </Link>
+        </div>
 
         <div className={styles.moon}>
           <ImageOptimized src="/moon2.png" alt="Moon" />
