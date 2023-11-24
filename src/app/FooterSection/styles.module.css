@@ -22,7 +22,7 @@
 }
 
 .neboText {
-  max-width: calc(1rem * 900 * 0.0625);
+  max-width: calc(1rem * 1100 * 0.0625);
   font-size: 5rem;
   line-height: 6rem;
   font-weight: 600;
