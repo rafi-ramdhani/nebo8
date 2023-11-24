@@ -27,10 +27,11 @@
   align-items: center;
   justify-content: space-between;
   overflow-x: hidden;
+  position: relative;
 }
 
 .headerNavigation nav {
-  width: 42rem;
+  min-width: 42rem;
   height: 3.5rem;
   display: flex;
   align-items: center;
@@ -40,6 +41,8 @@
   padding: 0rem 1rem;
   overflow-x: hidden;
   overflow-y: hidden;
+  position: absolute;
+  right: 1rem;
 }
 
 .headerNavigation nav ul {
@@ -80,13 +83,26 @@
   display: flex;
   align-items: center;
   text-decoration: none;
+  position: relative;
 }
 .logoText {
-  font-size: 1.5rem;
   max-width: 5rem;
+  font-size: 1.5rem;
   text-align: center;
   font-weight: 700;
   color: white;
   margin-left: -1rem;
   text-transform: uppercase;
+}
+@media only screen and (max-width: 450px) {
+  .logoContainer {
+    flex-direction: column;
+    gap: 0.5rem;
+    left: -2rem;
+  }
+  .logoText {
+    font-size: 1rem;
+    margin-left: 0rem;
+    max-width: none;
+  }
 }

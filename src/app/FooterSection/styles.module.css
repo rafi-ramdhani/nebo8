@@ -8,6 +8,11 @@
   position: relative;
   z-index: 1;
 }
+@media only screen and (max-width: 450px) {
+  .footerContent {
+    gap: 0rem;
+  }
+}
 
 .textContainer {
   display: flex;
@@ -44,6 +49,13 @@
   justify-content: center;
   gap: 5rem;
   margin-top: 2rem;
+  position: relative;
+  z-index: 10;
+}
+@media only screen and (max-width: 450px) {
+  .contactContainer {
+    gap: 1rem;
+  }
 }
 .contactDetailContainer {
   display: flex;
@@ -131,4 +143,5 @@
   height: calc(1rem * 445 * 0.0625);
   bottom: 0;
   left: calc(50% - (calc(1rem * 1358 * 0.0625 * 0.5)) - 2rem);
+  z-index: 1;
 }
